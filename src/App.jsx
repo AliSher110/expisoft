@@ -7,6 +7,7 @@ import Services from './pages/Services'
 import Industries from './pages/Industries'
 import Technologies from './pages/Technologies'
 import Insights from './pages/Insights'
+import BlogArticle from './pages/BlogArticle'
 import Portfolio from './pages/Portfolio'
 import MobileApp from './pages/MobileApp'
 import Checkout from './pages/Checkout'
@@ -16,6 +17,10 @@ import EnterpriseSoftware from './pages/EnterpriseSoftware'
 import SaaSDevelopment from './pages/SaaSDevelopment'
 import LegacyModernization from './pages/LegacyModernization'
 import ApiIntegration from './pages/ApiIntegration'
+import Contact from './pages/Contact'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
+import Sitemap from './pages/Sitemap'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -34,6 +39,7 @@ export default function App() {
         <Route path="/industries" element={<Industries />} />
         <Route path="/technologies" element={<Technologies />} />
         <Route path="/insights" element={<Insights />} />
+        <Route path="/insights/:slug" element={<BlogArticle />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/mobile-app-development" element={<MobileApp />} />
         <Route path="/checkout" element={<Checkout />} />
@@ -43,6 +49,10 @@ export default function App() {
         <Route path="/saas-development" element={<SaaSDevelopment />} />
         <Route path="/legacy-modernization" element={<LegacyModernization />} />
         <Route path="/api-integration" element={<ApiIntegration />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/sitemap" element={<Sitemap />} />
       </Routes>
       <Footer />
     </Router>

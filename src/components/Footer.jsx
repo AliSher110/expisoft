@@ -41,7 +41,7 @@ export default function Footer() {
             <Link to="/insights">Blog & Insights</Link>
             <Link to="/portfolio">Portfolio</Link>
             <Link to="/">Press & Media</Link>
-            <Link to="/">Contact Us</Link>
+            <Link to="/contact">Contact Us</Link>
           </div>
         </div>
 
@@ -66,9 +66,9 @@ export default function Footer() {
             <p>© ExpinSoft 2026. All rights reserved.</p>
           </div>
           <div className="links">
-            <Link to="/">Privacy Policy</Link>
-            <Link to="/">Terms of Service</Link>
-            <Link to="/">Sitemap</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
+            <Link to="/sitemap">Sitemap</Link>
           </div>
         </div>
       </div>

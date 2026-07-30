@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const services = [
   'Mobile App Development', 'Custom Software Development', 'Web Development',
@@ -51,7 +52,7 @@ export default function QuoteModal({ onClose }) {
             <div className="fld">
               <textarea name="message" value={form.message} onChange={onChange} placeholder="Tell us about your project…" rows={4} />
             </div>
-            <p className="agree">By submitting you agree to our <a href="#">Privacy Policy</a>.</p>
+            <p className="agree">By submitting you agree to our <Link to="/privacy" onClick={onClose}>Privacy Policy</Link>.</p>
             <div className="submit">
               <button type="submit" className="btn" style={{ width: '100%', justifyContent: 'center' }}>
                 Get My Free Quote →

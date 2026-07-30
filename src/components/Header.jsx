@@ -103,6 +103,7 @@ export default function Header() {
             <Link to="/technologies" className={isActive('/technologies')}>Technologies</Link>
             <Link to="/insights" className={isActive('/insights')}>Insights</Link>
             <Link to="/portfolio" className={isActive('/portfolio')}>Portfolio</Link>
+            <Link to="/contact" className={isActive('/contact')}>Contact Us</Link>
             <button className="btn btn-sm hide-mobile" style={{marginLeft:8}} onClick={() => setQuoteOpen(true)}>Get a Quote</button>
             <button className="btn mobile-cta" onClick={() => setQuoteOpen(true)}>Get a Quote</button>
           </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
+import { blogPosts } from '../data/blogPosts'
 
 const featured = {
   tag: 'Industry Report',
@@ -9,23 +10,11 @@ const featured = {
   img: '1515879218367-8466d910aaa4',
 }
 
-const blogs = [
-  { h: 'How AI is Transforming Enterprise Software in 2026', p: 'Explore the top AI-driven patterns reshaping how companies build and deploy custom software.', img: '1674027444485-cec3da58eef4', cat: 'AI' },
-  { h: 'React Native vs Flutter: Which Should You Pick?', p: 'A head-to-head comparison to help you choose the right cross-platform framework for your app.', img: '1480694313141-fce5e697ee25', cat: 'Mobile' },
-  { h: 'The Definitive Guide to Hiring a Software Development Partner', p: '10 critical questions every CTO should ask before signing a software outsourcing contract.', img: '1607799279861-4dd421887fb3', cat: 'Web' },
-  { h: 'Cloud Cost Optimization: 7 Strategies That Actually Work', p: 'Practical ways engineering teams are trimming AWS and Azure bills without sacrificing reliability.', img: '1695668548342-c0c1ad479aee', cat: 'Cloud' },
-  { h: "Building HIPAA-Compliant Apps: A Developer's Checklist", p: 'The technical and process controls every healthcare app needs before it reaches production.', img: '1576091160399-112ba8d25d1d', cat: 'Web' },
-  { h: 'What Generative AI Means for Product Teams in 2026', p: 'How product managers are embedding LLMs into roadmaps without losing sight of user value.', img: '1697577418970-95d99b5a55cf', cat: 'AI' },
-  { h: 'Microservices vs Monoliths: Choosing the Right Architecture', p: 'A practical framework for deciding when to split — and when to stay monolithic for longer.', img: '1542831371-29b0f74f9713', cat: 'Web' },
-  { h: 'DevOps in 2026: CI/CD Pipelines That Scale', p: 'Lessons from shipping 800+ releases a year without slowing engineering velocity.', img: '1639066648921-82d4500abf1a', cat: 'Cloud' },
-  { h: '5 Signs Your Startup Needs a Dedicated Mobile Team', p: 'How to tell when it is time to move beyond a single contractor and build a real mobile practice.', img: '1519389950473-47ba0277781c', cat: 'Mobile' },
-]
-
 const categories = ['All', 'Mobile', 'AI', 'Web', 'Cloud']
 
 export default function Insights() {
   const [tab, setTab] = useState('All')
-  const filtered = tab === 'All' ? blogs : blogs.filter(b => b.cat === tab)
+  const filtered = tab === 'All' ? blogPosts : blogPosts.filter(b => b.cat === tab)
 
   return (
     <>
@@ -83,17 +72,18 @@ export default function Insights() {
               <button key={t} className={`ins-tab${tab === t ? ' active' : ''}`} onClick={() => setTab(t)}>{t}</button>
             ))}
           </div>
-          <p className="grid-label">Showing {filtered.length} of {blogs.length} articles</p>
+          <p className="grid-label">Showing {filtered.length} of {blogPosts.length} articles</p>
           <div className="blog-grid">
             {filtered.map(b => (
-              <div key={b.h} className="blog">
+              <div key={b.slug} className="blog">
                 <div className="img">
                   <img src={`https://images.unsplash.com/photo-${b.img}?w=600&q=80`} alt={b.h} loading="lazy" />
                 </div>
                 <div className="bd">
+                  <span className="blog-meta">{b.topic} · {b.readTime}</span>
                   <h3>{b.h}</h3>
                   <p>{b.p}</p>
-                  <span className="more">Read Article →</span>
+                  <Link to={`/insights/${b.slug}`} className="more">Read Article →</Link>
                 </div>
               </div>
             ))}

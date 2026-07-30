@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function ConsultForm({ title = "Let's Discuss\nYour Project" }) {
   const [sent, setSent] = useState(false)
@@ -27,7 +28,7 @@ export default function ConsultForm({ title = "Let's Discuss\nYour Project" }) {
             <textarea name="message" value={form.message} onChange={onChange} placeholder="Tell us about your project…" rows={4} />
           </div>
           <p className="agree">
-            By submitting you agree to our <a href="#">Privacy Policy</a>.
+            By submitting you agree to our <Link to="/privacy">Privacy Policy</Link>.
           </p>
           <div className="submit">
             <button type="submit" className="btn" style={{ width: '100%', justifyContent: 'center' }}>
