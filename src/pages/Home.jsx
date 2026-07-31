@@ -220,15 +220,15 @@ export default function Home() {
           <div className="ai-wrap">
             <div className="ai-side">
               {[
-                { h: 'Predictive Analytics', p: 'Forecast outcomes from your business data.' },
-                { h: 'Natural Language AI', p: 'Smart chatbots and document intelligence.' },
-                { h: 'Computer Vision', p: 'Automated image recognition and quality control.' },
-                { h: 'Recommendation Engines', p: 'Personalization at scale, like Netflix does it.' },
+                { h: 'Machine Learning', p: 'Custom-trained models that predict, forecast, and automate decisions.', href: '/machine-learning' },
+                { h: 'Computer Vision', p: 'Real-time detection, tracking, and automated visual inspection.', href: '/computer-vision' },
+                { h: 'NLP Solutions', p: 'Chatbots, document intelligence, and language-aware search.', href: '/nlp-solutions' },
+                { h: 'AI Consulting', p: 'Roadmaps and strategy to find your highest-ROI AI use cases.', href: '/ai-consulting' },
               ].map((it, i) => (
-                <div key={it.h} className={`item${i === 0 ? ' active' : ''}`}>
+                <Link key={it.h} to={it.href} className={`item${i === 0 ? ' active' : ''}`}>
                   <h4>{it.h}</h4>
                   <p>{it.p}</p>
-                </div>
+                </Link>
               ))}
               <div className="thumb">
                 <img src="https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?w=400&q=80" alt="AI" loading="lazy" />
@@ -421,7 +421,7 @@ export default function Home() {
               <div className="cinfo">
                 <div><span className="ic">📧</span> info@expinsoft.com</div>
                 <div><span className="ic">📞</span> +1 (832) 555-0190</div>
-                <div><span className="ic">📍</span> Houston, TX — New York, NY</div>
+                <div><span className="ic">📍</span> Coquitlam, Canada — Karachi, Pakistan</div>
               </div>
             </div>
             <div>

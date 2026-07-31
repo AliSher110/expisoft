@@ -17,6 +17,18 @@ import EnterpriseSoftware from './pages/EnterpriseSoftware'
 import SaaSDevelopment from './pages/SaaSDevelopment'
 import LegacyModernization from './pages/LegacyModernization'
 import ApiIntegration from './pages/ApiIntegration'
+import ReactNextjsDevelopment from './pages/ReactNextjsDevelopment'
+import NodeJsDevelopment from './pages/NodeJsDevelopment'
+import EcommerceDevelopment from './pages/EcommerceDevelopment'
+import CmsSolutions from './pages/CmsSolutions'
+import MachineLearning from './pages/MachineLearning'
+import ComputerVision from './pages/ComputerVision'
+import NlpSolutions from './pages/NlpSolutions'
+import AiConsulting from './pages/AiConsulting'
+import SmartContracts from './pages/SmartContracts'
+import DefiPlatforms from './pages/DefiPlatforms'
+import NftMarketplace from './pages/NftMarketplace'
+import Web3Integration from './pages/Web3Integration'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
@@ -49,6 +61,18 @@ export default function App() {
         <Route path="/saas-development" element={<SaaSDevelopment />} />
         <Route path="/legacy-modernization" element={<LegacyModernization />} />
         <Route path="/api-integration" element={<ApiIntegration />} />
+        <Route path="/react-nextjs-development" element={<ReactNextjsDevelopment />} />
+        <Route path="/nodejs-development" element={<NodeJsDevelopment />} />
+        <Route path="/ecommerce-development" element={<EcommerceDevelopment />} />
+        <Route path="/cms-solutions" element={<CmsSolutions />} />
+        <Route path="/machine-learning" element={<MachineLearning />} />
+        <Route path="/computer-vision" element={<ComputerVision />} />
+        <Route path="/nlp-solutions" element={<NlpSolutions />} />
+        <Route path="/ai-consulting" element={<AiConsulting />} />
+        <Route path="/smart-contracts" element={<SmartContracts />} />
+        <Route path="/defi-platforms" element={<DefiPlatforms />} />
+        <Route path="/nft-marketplace" element={<NftMarketplace />} />
+        <Route path="/web3-integration" element={<Web3Integration />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />

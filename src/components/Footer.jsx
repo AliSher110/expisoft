@@ -48,11 +48,8 @@ export default function Footer() {
         <div className="locs">
           <h4>Our Offices</h4>
           <div className="loc-codes">
-            <span>Houston, TX</span>
-            <span>New York, NY</span>
-            <span>Austin, TX</span>
-            <span>Los Angeles, CA</span>
-            <span>Karachi, PK</span>
+            <span>Coquitlam, Canada</span>
+            <span>Karachi, Pakistan</span>
           </div>
           <div className="loc-meta">
             <span>📧 info@expinsoft.com</span>

@@ -27,17 +27,32 @@ const megaLinks = [
   {
     cat: 'Web Development',
     href: '/services',
-    links: ['React / Next.js', 'Node.js Back-End', 'E-Commerce', 'CMS Solutions']
+    links: [
+      { label: 'React / Next.js', href: '/react-nextjs-development' },
+      { label: 'Node.js Back-End', href: '/nodejs-development' },
+      { label: 'E-Commerce', href: '/ecommerce-development' },
+      { label: 'CMS Solutions', href: '/cms-solutions' },
+    ]
   },
   {
     cat: 'Artificial Intelligence',
     href: '/services',
-    links: ['Machine Learning', 'Computer Vision', 'NLP Solutions', 'AI Consulting']
+    links: [
+      { label: 'Machine Learning', href: '/machine-learning' },
+      { label: 'Computer Vision', href: '/computer-vision' },
+      { label: 'NLP Solutions', href: '/nlp-solutions' },
+      { label: 'AI Consulting', href: '/ai-consulting' },
+    ]
   },
   {
     cat: 'Blockchain Development',
     href: '/services',
-    links: ['Smart Contracts', 'DeFi Platforms', 'NFT Marketplace', 'Web3 Integration']
+    links: [
+      { label: 'Smart Contracts', href: '/smart-contracts' },
+      { label: 'DeFi Platforms', href: '/defi-platforms' },
+      { label: 'NFT Marketplace', href: '/nft-marketplace' },
+      { label: 'Web3 Integration', href: '/web3-integration' },
+    ]
   },
   {
     cat: 'Cloud Services',
@@ -103,7 +118,6 @@ export default function Header() {
             <Link to="/technologies" className={isActive('/technologies')}>Technologies</Link>
             <Link to="/insights" className={isActive('/insights')}>Insights</Link>
             <Link to="/portfolio" className={isActive('/portfolio')}>Portfolio</Link>
-            <Link to="/contact" className={isActive('/contact')}>Contact Us</Link>
             <button className="btn btn-sm hide-mobile" style={{marginLeft:8}} onClick={() => setQuoteOpen(true)}>Get a Quote</button>
             <button className="btn mobile-cta" onClick={() => setQuoteOpen(true)}>Get a Quote</button>
           </div>
