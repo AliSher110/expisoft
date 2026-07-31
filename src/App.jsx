@@ -29,6 +29,18 @@ import SmartContracts from './pages/SmartContracts'
 import DefiPlatforms from './pages/DefiPlatforms'
 import NftMarketplace from './pages/NftMarketplace'
 import Web3Integration from './pages/Web3Integration'
+import AwsSolutions from './pages/AwsSolutions'
+import AzureDevOps from './pages/AzureDevOps'
+import CloudMigration from './pages/CloudMigration'
+import DevOpsCiCd from './pages/DevOpsCiCd'
+import Unity3dGames from './pages/Unity3dGames'
+import UnrealEngine from './pages/UnrealEngine'
+import ArVrGames from './pages/ArVrGames'
+import CasualMobileGames from './pages/CasualMobileGames'
+import SeoContent from './pages/SeoContent'
+import PpcAdvertising from './pages/PpcAdvertising'
+import SocialMediaMarketing from './pages/SocialMediaMarketing'
+import BrandStrategy from './pages/BrandStrategy'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
@@ -73,6 +85,18 @@ export default function App() {
         <Route path="/defi-platforms" element={<DefiPlatforms />} />
         <Route path="/nft-marketplace" element={<NftMarketplace />} />
         <Route path="/web3-integration" element={<Web3Integration />} />
+        <Route path="/aws-solutions" element={<AwsSolutions />} />
+        <Route path="/azure-devops" element={<AzureDevOps />} />
+        <Route path="/cloud-migration" element={<CloudMigration />} />
+        <Route path="/devops-cicd" element={<DevOpsCiCd />} />
+        <Route path="/unity-3d-games" element={<Unity3dGames />} />
+        <Route path="/unreal-engine" element={<UnrealEngine />} />
+        <Route path="/ar-vr-games" element={<ArVrGames />} />
+        <Route path="/casual-mobile-games" element={<CasualMobileGames />} />
+        <Route path="/seo-content" element={<SeoContent />} />
+        <Route path="/ppc-advertising" element={<PpcAdvertising />} />
+        <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
+        <Route path="/brand-strategy" element={<BrandStrategy />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />

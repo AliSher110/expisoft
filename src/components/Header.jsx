@@ -57,17 +57,32 @@ const megaLinks = [
   {
     cat: 'Cloud Services',
     href: '/services',
-    links: ['AWS Solutions', 'Azure DevOps', 'Cloud Migration', 'DevOps CI/CD']
+    links: [
+      { label: 'AWS Solutions', href: '/aws-solutions' },
+      { label: 'Azure DevOps', href: '/azure-devops' },
+      { label: 'Cloud Migration', href: '/cloud-migration' },
+      { label: 'DevOps CI/CD', href: '/devops-cicd' },
+    ]
   },
   {
     cat: 'Game Development',
     href: '/services',
-    links: ['Unity 3D Games', 'Unreal Engine', 'AR/VR Games', 'Casual Mobile Games']
+    links: [
+      { label: 'Unity 3D Games', href: '/unity-3d-games' },
+      { label: 'Unreal Engine', href: '/unreal-engine' },
+      { label: 'AR/VR Games', href: '/ar-vr-games' },
+      { label: 'Casual Mobile Games', href: '/casual-mobile-games' },
+    ]
   },
   {
     cat: 'Digital Marketing',
     href: '/services',
-    links: ['SEO / Content', 'PPC Advertising', 'Social Media', 'Brand Strategy']
+    links: [
+      { label: 'SEO / Content', href: '/seo-content' },
+      { label: 'PPC Advertising', href: '/ppc-advertising' },
+      { label: 'Social Media', href: '/social-media-marketing' },
+      { label: 'Brand Strategy', href: '/brand-strategy' },
+    ]
   },
 ]
 
