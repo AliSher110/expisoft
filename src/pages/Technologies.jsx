@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
+import { ArrowRight } from 'lucide-react'
 
 const techSections = [
   {
@@ -73,7 +74,7 @@ export default function Technologies() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Our Stack</p>
               <h1>Best-in-Class Technologies for Every Challenge</h1>
               <p className="lead">
-                We don't lock you into a single vendor. We select the right technology for each problem —
+                We don't lock you into a single vendor. We select the right technology for each problem -
                 drawing from a broad, battle-tested stack spanning languages, frameworks, and cloud platforms.
               </p>
               <div className="pillars">
@@ -98,7 +99,7 @@ export default function Technologies() {
                   <div key={c.h} className={`tcard-tech${c.hot ? ' scard hot' : ''}`}>
                     <h3>{c.h}</h3>
                     <p>{c.p}</p>
-                    <span className="arr">→</span>
+                    <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                   </div>
                 ))}
               </div>

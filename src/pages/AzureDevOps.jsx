@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Building2, ClipboardList, Repeat, Shield } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🔁', h: 'Pipeline Automation', p: 'Build, test, and deploy pipelines that run on every commit, not just when someone remembers to.' },
-  { ic: '📋', h: 'Boards & Work Tracking', p: 'Azure Boards configured to match how your team actually plans and ships work.' },
-  { ic: '🏗️', h: 'Infrastructure as Code', p: 'ARM templates and Bicep for repeatable, auditable Azure environments.' },
-  { ic: '🛡️', h: 'Release Gates & Approvals', p: 'Staged environments with automated checks before anything reaches production.' },
+  { ic: Repeat, h: 'Pipeline Automation', p: 'Build, test, and deploy pipelines that run on every commit, not just when someone remembers to.' },
+  { ic: ClipboardList, h: 'Boards & Work Tracking', p: 'Azure Boards configured to match how your team actually plans and ships work.' },
+  { ic: Building2, h: 'Infrastructure as Code', p: 'ARM templates and Bicep for repeatable, auditable Azure environments.' },
+  { ic: Shield, h: 'Release Gates & Approvals', p: 'Staged environments with automated checks before anything reaches production.' },
 ]
 
 const stack = [
@@ -42,7 +43,7 @@ export default function AzureDevOps() {
               <h1>Azure DevOps Services</h1>
               <p className="lead">
                 We build and manage CI/CD pipelines on Azure DevOps that get code from commit to
-                production safely — with automated testing, staged rollouts, and rollback built in from day one.
+                production safely - with automated testing, staged rollouts, and rollback built in from day one.
               </p>
               <div className="pillars">
                 {['Automated CI/CD Pipelines', 'Infrastructure as Code', 'Staged Rollouts & Rollback', 'Full Release Traceability'].map(p => (
@@ -76,7 +77,7 @@ export default function AzureDevOps() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function AzureDevOps() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

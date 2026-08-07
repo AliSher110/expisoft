@@ -4,6 +4,7 @@ import { Elements } from '@stripe/react-stripe-js'
 import { stripePromise, stripeEnabled } from '../lib/stripe'
 import StripeCardForm from '../components/StripeCardForm'
 import PayPalCheckoutButton, { paypalEnabled } from '../components/PayPalCheckoutButton'
+import { CheckCircle2, CreditCard } from 'lucide-react'
 
 const planFeatures = {
   Starter: ['Custom-designed website (up to 5 pages)', 'Mobile-responsive & SEO-optimized', 'Contact form & Google Maps', '2 rounds of revisions', '30 days post-launch support'],
@@ -44,8 +45,8 @@ export default function Checkout() {
 
         {order ? (
           <div className="order-success">
-            <div className="check-ic">✓</div>
-            <h2>Payment Received — You're All Set!</h2>
+            <div className="check-ic"><CheckCircle2 size={34} strokeWidth={1.75} /></div>
+            <h2>Payment Received - You're All Set!</h2>
             <p>Thanks for choosing ExpinSoft. A confirmation has been sent to your inbox and our team will reach out within 24 hours to kick off your <b>{order.plan}</b> project.</p>
             <div className="order-ref">
               <span>Reference</span>
@@ -77,7 +78,7 @@ export default function Checkout() {
                   <span>Total Due Today</span>
                   <b>${price.toLocaleString()}</b>
                 </div>
-                <p className="order-note">A 25% deposit may apply depending on scope — our team will confirm final terms during discovery.</p>
+                <p className="order-note">A 25% deposit may apply depending on scope - our team will confirm final terms during discovery.</p>
               </div>
 
               <div className="payment-card form-card">
@@ -94,7 +95,7 @@ export default function Checkout() {
                 </div>
 
                 <div className="pay-tabs">
-                  <button type="button" className={`pay-tab${method === 'card' ? ' active' : ''}`} onClick={() => setMethod('card')}>💳 Credit / Debit Card</button>
+                  <button type="button" className={`pay-tab${method === 'card' ? ' active' : ''}`} onClick={() => setMethod('card')}><CreditCard size={17} strokeWidth={1.75} /> Credit / Debit Card</button>
                   <button type="button" className={`pay-tab${method === 'paypal' ? ' active' : ''}`} onClick={() => setMethod('paypal')}>PayPal</button>
                 </div>
 
@@ -109,7 +110,7 @@ export default function Checkout() {
                     </Elements>
                   ) : (
                     <p className="pay-hint config-hint">
-                      Stripe test mode isn't configured yet. Add <code>VITE_STRIPE_PUBLISHABLE_KEY</code> to your <code>.env</code> file to enable card payments — see <code>.env.example</code>.
+                      Stripe test mode isn't configured yet. Add <code>VITE_STRIPE_PUBLISHABLE_KEY</code> to your <code>.env</code> file to enable card payments - see <code>.env.example</code>.
                     </p>
                   )
                 )}
@@ -119,7 +120,7 @@ export default function Checkout() {
                     <PayPalCheckoutButton amount={price} planName={planName} onSuccess={handleSuccess} onError={() => setPayError('PayPal couldn\'t process that payment. Please try again.')} />
                   ) : (
                     <p className="pay-hint config-hint">
-                      PayPal sandbox isn't configured yet. Add <code>VITE_PAYPAL_CLIENT_ID</code> to your <code>.env</code> file to enable PayPal — see <code>.env.example</code>.
+                      PayPal sandbox isn't configured yet. Add <code>VITE_PAYPAL_CLIENT_ID</code> to your <code>.env</code> file to enable PayPal - see <code>.env.example</code>.
                     </p>
                   )
                 )}

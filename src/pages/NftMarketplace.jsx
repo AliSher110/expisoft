@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Briefcase, Palette, RefreshCw, Store } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🎨', h: 'Minting Platforms', p: 'Custom minting sites with allowlists, reveal mechanics, and metadata management.' },
-  { ic: '🏪', h: 'Marketplace Infrastructure', p: 'Listings, offers, auctions, and royalty enforcement built into the contract layer.' },
-  { ic: '💼', h: 'Creator Tools', p: 'Dashboards for creators to manage collections, track sales, and collect royalties.' },
-  { ic: '🔄', h: 'Cross-Chain Support', p: 'Marketplaces that work across Ethereum, Polygon, and other chains your users already hold assets on.' },
+  { ic: Palette, h: 'Minting Platforms', p: 'Custom minting sites with allowlists, reveal mechanics, and metadata management.' },
+  { ic: Store, h: 'Marketplace Infrastructure', p: 'Listings, offers, auctions, and royalty enforcement built into the contract layer.' },
+  { ic: Briefcase, h: 'Creator Tools', p: 'Dashboards for creators to manage collections, track sales, and collect royalties.' },
+  { ic: RefreshCw, h: 'Cross-Chain Support', p: 'Marketplaces that work across Ethereum, Polygon, and other chains your users already hold assets on.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function NftMarketplace() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Built for Creators and Collectors</p>
               <h1>NFT Marketplace Development Services</h1>
               <p className="lead">
-                We build NFT marketplaces and minting platforms — from a single-collection drop site to
+                We build NFT marketplaces and minting platforms - from a single-collection drop site to
                 a full multi-category marketplace with royalties, auctions, and cross-chain support.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function NftMarketplace() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function NftMarketplace() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import digitalServicesImg from '../assets/Digital-Services.webp'
+import { ArrowRight, BarChart3, Bot, CheckCircle2, Eye, Mail, MapPin, MessageSquare, Phone, RefreshCw, Star, Target, Timer } from 'lucide-react'
 
 const services = [
   { title: 'Mobile App Development', img: '1519389950473-47ba0277781c' },
@@ -17,7 +18,7 @@ const cases = [
   {
     label: 'Digital Services',
     h: 'Full-Spectrum Digital Services, One Partner',
-    desc: 'From web and mobile platforms to AI-powered automation — ExpinSoft delivers end-to-end digital services under one roof, so you never have to stitch together multiple vendors to ship a product.',
+    desc: 'From web and mobile platforms to AI-powered automation - ExpinSoft delivers end-to-end digital services under one roof, so you never have to stitch together multiple vendors to ship a product.',
     impact: ['40+ digital services under one roof', '15+ industries served worldwide', 'Dedicated senior engineers on every build'],
     img: digitalServicesImg,
     tag: 'Digital Services / Full-Stack',
@@ -74,9 +75,9 @@ const team = [
 ]
 
 const engagements = [
-  { ic: '🎯', h: 'Fixed-Price Project', p: 'Clear scope, defined deliverables, fixed cost. Perfect for well-defined projects with predictable requirements.' },
-  { ic: '🔄', h: 'Dedicated Team', p: 'Scale up or down seamlessly with a fully managed dedicated development team integrated into your workflows.' },
-  { ic: '⏱️', h: 'Time & Material', p: 'Maximum flexibility for evolving requirements. Pay only for the time and resources actually used.' },
+  { ic: Target, h: 'Fixed-Price Project', p: 'Clear scope, defined deliverables, fixed cost. Perfect for well-defined projects with predictable requirements.' },
+  { ic: RefreshCw, h: 'Dedicated Team', p: 'Scale up or down seamlessly with a fully managed dedicated development team integrated into your workflows.' },
+  { ic: Timer, h: 'Time & Material', p: 'Maximum flexibility for evolving requirements. Pay only for the time and resources actually used.' },
 ]
 
 const awards = ['Clutch Top Dev', 'Inc. 5000', 'GoodFirms Leader', 'Deloitte Fast 50', 'G2 Top Rated', 'ISO Certified']
@@ -89,10 +90,10 @@ const blogs = [
 ]
 
 const aiFeats = [
-  { ic: '🤖', label: 'ML Models' },
-  { ic: '👁️', label: 'Computer Vision' },
-  { ic: '💬', label: 'NLP / ChatBots' },
-  { ic: '📊', label: 'Predictive Analytics' },
+  { ic: Bot, label: 'ML Models' },
+  { ic: Eye, label: 'Computer Vision' },
+  { ic: MessageSquare, label: 'NLP / ChatBots' },
+  { ic: BarChart3, label: 'Predictive Analytics' },
 ]
 
 export default function Home() {
@@ -135,7 +136,7 @@ export default function Home() {
           <div className="head">
             <p className="eyebrow orange">What We Build</p>
             <h2>End-to-End Software Services</h2>
-            <p>From mobile apps to enterprise platforms — we cover the full technology stack so you don't have to manage multiple vendors.</p>
+            <p>From mobile apps to enterprise platforms - we cover the full technology stack so you don't have to manage multiple vendors.</p>
           </div>
           <div className="svc-grid">
             {services.map(s => (
@@ -143,7 +144,7 @@ export default function Home() {
                 <img src={`https://images.unsplash.com/photo-${s.img}?w=600&q=80`} alt={s.title} loading="lazy" />
                 <div className="ov" />
                 <h3>{s.title}</h3>
-                <span className="arr">→</span>
+                <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
               </Link>
             ))}
           </div>
@@ -190,7 +191,7 @@ export default function Home() {
           <div className="head">
             <p className="eyebrow" style={{ color: 'var(--orange)' }}>Client Love</p>
             <h2>What Our Clients Say</h2>
-            <p>Don't take our word for it — hear directly from the teams we've partnered with.</p>
+            <p>Don't take our word for it - hear directly from the teams we've partnered with.</p>
           </div>
           <div className="tst-row">
             {testimonials.map(t => (
@@ -236,11 +237,11 @@ export default function Home() {
             </div>
             <div className="ai-main">
               <h3>Transform Your Business with AI</h3>
-              <p>We embed machine learning, predictive analytics, and generative AI into your software so it doesn't just work — it learns and improves over time.</p>
+              <p>We embed machine learning, predictive analytics, and generative AI into your software so it doesn't just work - it learns and improves over time.</p>
               <div className="ai-feats">
                 {aiFeats.map(f => (
                   <div key={f.label} className="ai-feat">
-                    <div className="ic">{f.ic}</div>
+                    <div className="ic"><f.ic size={24} strokeWidth={1.75} /></div>
                     <p>{f.label}</p>
                   </div>
                 ))}
@@ -315,7 +316,7 @@ export default function Home() {
             <div className="stats">
               {[['800+','Projects Delivered'],['98%','Client Retention'],['10','Years of Excellence'],['4.8/5','Client Rating']].map(([b,s]) => (
                 <div key={b} className="stat">
-                  <div className="ic">★</div>
+                  <div className="ic"><Star size={18} strokeWidth={1.75} /></div>
                   <div><b>{b}</b><span>{s}</span></div>
                 </div>
               ))}
@@ -330,12 +331,12 @@ export default function Home() {
           <div className="head">
             <p className="eyebrow orange">How We Work</p>
             <h2>Flexible Engagement Models</h2>
-            <p>Choose the partnership model that fits your project, timeline, and budget — or mix and match as you scale.</p>
+            <p>Choose the partnership model that fits your project, timeline, and budget - or mix and match as you scale.</p>
           </div>
           <div className="eng-grid">
             {engagements.map(e => (
               <div key={e.h} className="eng">
-                <div className="ic">{e.ic}</div>
+                <div className="ic"><e.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{e.h}</h3>
                 <p>{e.p}</p>
               </div>
@@ -406,7 +407,7 @@ export default function Home() {
             <div>
               <p className="eyebrow orange" style={{ marginBottom: 12 }}>Get In Touch</p>
               <h2>Tell Us About Your Project</h2>
-              <p className="sub">Whether you have a rough idea or a detailed spec — our team will help you clarify scope, estimate cost, and chart a path to launch.</p>
+              <p className="sub">Whether you have a rough idea or a detailed spec - our team will help you clarify scope, estimate cost, and chart a path to launch.</p>
               <h4>Trusted by industry leaders</h4>
               <div className="rev-list">
                 <div className="rev-item">
@@ -419,15 +420,15 @@ export default function Home() {
                 </div>
               </div>
               <div className="cinfo">
-                <div><span className="ic">📧</span> info@expinsoft.com</div>
-                <div><span className="ic">📞</span> +1 (832) 555-0190</div>
-                <div><span className="ic">📍</span> Coquitlam, Canada — Karachi, Pakistan</div>
+                <div><span className="ic"><Mail size={18} strokeWidth={1.75} /></span> info@expinsoft.com</div>
+                <div><span className="ic"><Phone size={18} strokeWidth={1.75} /></span> +1 (832) 555-0190</div>
+                <div><span className="ic"><MapPin size={18} strokeWidth={1.75} /></span> Coquitlam, Canada - Karachi, Pakistan</div>
               </div>
             </div>
             <div>
               {formSent ? (
                 <div className="form-card">
-                  <p className="success-msg" style={{ fontSize: 18, padding: '40px 0' }}>✓ Thanks! We'll reach out within 24 hours.</p>
+                  <p className="success-msg" style={{ fontSize: 18, padding: '40px 0' }}><CheckCircle2 size={22} strokeWidth={1.75} /> Thanks! We'll reach out within 24 hours.</p>
                 </div>
               ) : (
                 <div className="form-card">

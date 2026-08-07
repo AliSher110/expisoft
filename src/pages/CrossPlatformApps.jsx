@@ -1,18 +1,19 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, DollarSign, Palette, RefreshCw, Zap } from 'lucide-react'
 
 const benefits = [
-  { ic: '⚡', h: 'Faster Time-to-Market', p: 'Ship to iOS and Android simultaneously from one shared codebase instead of building twice.' },
-  { ic: '💰', h: 'Lower Development Cost', p: '60-90% code reuse across platforms means less engineering time and lower long-term maintenance cost.' },
-  { ic: '🎨', h: 'Consistent User Experience', p: 'One design system and one set of business logic keeps behavior identical across every device.' },
-  { ic: '🔄', h: 'Easier Long-Term Maintenance', p: 'Ship a bug fix or feature once and it rolls out everywhere — no platform drift over time.' },
+  { ic: Zap, h: 'Faster Time-to-Market', p: 'Ship to iOS and Android simultaneously from one shared codebase instead of building twice.' },
+  { ic: DollarSign, h: 'Lower Development Cost', p: '60-90% code reuse across platforms means less engineering time and lower long-term maintenance cost.' },
+  { ic: Palette, h: 'Consistent User Experience', p: 'One design system and one set of business logic keeps behavior identical across every device.' },
+  { ic: RefreshCw, h: 'Easier Long-Term Maintenance', p: 'Ship a bug fix or feature once and it rolls out everywhere - no platform drift over time.' },
 ]
 
 const frameworks = [
   { h: 'React Native', p: 'Facebook\'s battle-tested framework for building native-feel apps with JavaScript and React, backed by the largest cross-platform ecosystem.', hot: true },
   { h: 'Flutter', p: 'Google\'s UI toolkit compiling to native ARM code for pixel-perfect, high-performance apps from a single Dart codebase.' },
-  { h: 'Ionic / Capacitor', p: 'Web-technology-powered apps that wrap into native containers — ideal for content-driven and hybrid apps.' },
+  { h: 'Ionic / Capacitor', p: 'Web-technology-powered apps that wrap into native containers - ideal for content-driven and hybrid apps.' },
   { h: '.NET MAUI', p: 'Microsoft\'s cross-platform framework for teams already invested in C# and the .NET ecosystem.' },
 ]
 
@@ -39,7 +40,7 @@ export default function CrossPlatformApps() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>One Codebase, Every Platform</p>
               <h1>Cross-Platform App Development That Feels Native</h1>
               <p className="lead">
-                We build iOS and Android apps from a single shared codebase — cutting development time
+                We build iOS and Android apps from a single shared codebase - cutting development time
                 and cost without asking your users to sacrifice native performance or platform feel.
               </p>
               <div className="pillars">
@@ -74,7 +75,7 @@ export default function CrossPlatformApps() {
           <div className="icards">
             {benefits.map(b => (
               <div key={b.h} className="icard">
-                <div className="ic">{b.ic}</div>
+                <div className="ic"><b.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{b.h}</h3>
                 <p>{b.p}</p>
               </div>
@@ -93,7 +94,7 @@ export default function CrossPlatformApps() {
                 <div key={f.h} className={`tcard-tech${f.hot ? ' scard hot' : ''}`}>
                   <h3>{f.h}</h3>
                   <p>{f.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -110,7 +111,7 @@ export default function CrossPlatformApps() {
           <div className="pf-case">
             <div>
               <p className="ch">Gaming / Consumer</p>
-              <h3>Rise Up Kings — Cross-Platform Gaming Platform</h3>
+              <h3>Rise Up Kings - Cross-Platform Gaming Platform</h3>
               <p>
                 A competitive multiplayer sports gaming platform built with a shared codebase for iOS and
                 Android, with real-time matchmaking and live leaderboards launched to both stores on the same day.
@@ -140,7 +141,7 @@ export default function CrossPlatformApps() {
 
       <PricingSection
         title="Cross-Platform App Investment Plans"
-        subtitle="Transparent packages for shared-codebase apps — from a lightweight MVP to a full enterprise build. Every project starts with a free discovery call."
+        subtitle="Transparent packages for shared-codebase apps - from a lightweight MVP to a full enterprise build. Every project starts with a free discovery call."
         gray={false}
       />
 

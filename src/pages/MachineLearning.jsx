@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, BarChart3, Brain, FlaskConical, Repeat } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🧠', h: 'Custom Model Development', p: 'Purpose-built models trained on your data, not generic off-the-shelf APIs.' },
-  { ic: '🔁', h: 'MLOps Pipelines', p: 'Automated retraining, versioning, and rollback so models stay accurate over time.' },
-  { ic: '📊', h: 'Predictive Analytics', p: 'Forecasting and anomaly detection that plugs directly into your existing dashboards.' },
-  { ic: '🧪', h: 'Experimentation Infrastructure', p: 'A/B testing and offline evaluation so you know a model works before it ships.' },
+  { ic: Brain, h: 'Custom Model Development', p: 'Purpose-built models trained on your data, not generic off-the-shelf APIs.' },
+  { ic: Repeat, h: 'MLOps Pipelines', p: 'Automated retraining, versioning, and rollback so models stay accurate over time.' },
+  { ic: BarChart3, h: 'Predictive Analytics', p: 'Forecasting and anomaly detection that plugs directly into your existing dashboards.' },
+  { ic: FlaskConical, h: 'Experimentation Infrastructure', p: 'A/B testing and offline evaluation so you know a model works before it ships.' },
 ]
 
 const stack = [
@@ -42,7 +43,7 @@ export default function MachineLearning() {
               <h1>Machine Learning Development Services</h1>
               <p className="lead">
                 We design, train, and deploy machine learning models that solve a specific business
-                problem — not research demos that never leave a notebook.
+                problem - not research demos that never leave a notebook.
               </p>
               <div className="pillars">
                 {['Production-Grade ML Pipelines', 'Custom Model Training', 'MLOps & Monitoring', 'Explainable Predictions'].map(p => (
@@ -76,7 +77,7 @@ export default function MachineLearning() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function MachineLearning() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

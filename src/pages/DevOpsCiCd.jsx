@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, BarChart3, Bird, Wrench, Zap } from 'lucide-react'
 
 const capabilities = [
-  { ic: '⚡', h: 'Fast Feedback Pipelines', p: 'Build and test suites tuned to run in minutes, not hours, so engineers stay in flow.' },
-  { ic: '🐦', h: 'Canary & Blue-Green Deploys', p: 'Progressive rollout strategies that catch problems before they hit every user.' },
-  { ic: '📊', h: 'Deployment Observability', p: 'Real-time health signals tied directly to automated rollback triggers.' },
-  { ic: '🔧', h: 'Pipeline as Code', p: 'Every pipeline defined, versioned, and reviewed like the rest of your codebase.' },
+  { ic: Zap, h: 'Fast Feedback Pipelines', p: 'Build and test suites tuned to run in minutes, not hours, so engineers stay in flow.' },
+  { ic: Bird, h: 'Canary & Blue-Green Deploys', p: 'Progressive rollout strategies that catch problems before they hit every user.' },
+  { ic: BarChart3, h: 'Deployment Observability', p: 'Real-time health signals tied directly to automated rollback triggers.' },
+  { ic: Wrench, h: 'Pipeline as Code', p: 'Every pipeline defined, versioned, and reviewed like the rest of your codebase.' },
 ]
 
 const stack = [
@@ -42,7 +43,7 @@ export default function DevOpsCiCd() {
               <h1>DevOps & CI/CD Pipeline Services</h1>
               <p className="lead">
                 We build CI/CD pipelines that let your team ship multiple times a day without holding
-                their breath — automated testing, staged deploys, and rollback built into every release.
+                their breath - automated testing, staged deploys, and rollback built into every release.
               </p>
               <div className="pillars">
                 {['Sub-10-Minute Build Times', 'Automated Testing Gates', 'Progressive Deployment', 'Instant Rollback'].map(p => (
@@ -76,7 +77,7 @@ export default function DevOpsCiCd() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function DevOpsCiCd() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

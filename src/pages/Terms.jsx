@@ -17,7 +17,7 @@ const sections = [
     h2: 'Intellectual Property Rights',
     body: [
       'Unless otherwise agreed in a signed statement of work, all code, designs, and deliverables created for a client as part of a paid engagement become the property of that client upon full payment.',
-      'All other content on this website — including our branding, logos, articles, and site design — remains the property of ExpinSoft and may not be reproduced without permission.',
+      'All other content on this website - including our branding, logos, articles, and site design - remains the property of ExpinSoft and may not be reproduced without permission.',
     ],
   },
   {

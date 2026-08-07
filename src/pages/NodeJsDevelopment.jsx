@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { Archive, ArrowRight, Puzzle, RefreshCw, TrendingUp } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🧩', h: 'REST & GraphQL APIs', p: 'Well-documented, versioned APIs designed around how your clients actually consume data.' },
-  { ic: '🔄', h: 'Event-Driven Services', p: 'Message queues and worker processes that keep your system responsive under load.' },
-  { ic: '🗄️', h: 'Database Architecture', p: 'Schema design and query optimization across SQL and NoSQL stores.' },
-  { ic: '📈', h: 'Observability Built In', p: 'Structured logging, tracing, and alerting from day one, not bolted on after an outage.' },
+  { ic: Puzzle, h: 'REST & GraphQL APIs', p: 'Well-documented, versioned APIs designed around how your clients actually consume data.' },
+  { ic: RefreshCw, h: 'Event-Driven Services', p: 'Message queues and worker processes that keep your system responsive under load.' },
+  { ic: Archive, h: 'Database Architecture', p: 'Schema design and query optimization across SQL and NoSQL stores.' },
+  { ic: TrendingUp, h: 'Observability Built In', p: 'Structured logging, tracing, and alerting from day one, not bolted on after an outage.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function NodeJsDevelopment() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Backend Engineering That Scales</p>
               <h1>Node.js Back-End Development Services</h1>
               <p className="lead">
-                We design and build backend systems in Node.js that handle real production load — REST
+                We design and build backend systems in Node.js that handle real production load - REST
                 and GraphQL APIs, event-driven services, and the infrastructure to keep them fast and reliable.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function NodeJsDevelopment() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function NodeJsDevelopment() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

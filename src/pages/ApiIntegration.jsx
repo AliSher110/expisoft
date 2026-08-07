@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Hammer, Plug, Repeat, Shield } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🔌', h: 'Third-Party Integrations', p: 'Connect Stripe, Salesforce, HubSpot, QuickBooks, and hundreds of other SaaS platforms into one unified workflow.' },
-  { ic: '🛠️', h: 'Custom API Development', p: 'Design and build REST or GraphQL APIs that are documented, versioned, and ready for partners to build on.' },
-  { ic: '🔁', h: 'Webhook & Event Pipelines', p: 'Real-time event-driven architecture so your systems react the moment something changes.' },
-  { ic: '🛡️', h: 'API Security & Rate Limiting', p: 'OAuth2, API keys, and rate limiting built in so your endpoints stay protected at scale.' },
+  { ic: Plug, h: 'Third-Party Integrations', p: 'Connect Stripe, Salesforce, HubSpot, QuickBooks, and hundreds of other SaaS platforms into one unified workflow.' },
+  { ic: Hammer, h: 'Custom API Development', p: 'Design and build REST or GraphQL APIs that are documented, versioned, and ready for partners to build on.' },
+  { ic: Repeat, h: 'Webhook & Event Pipelines', p: 'Real-time event-driven architecture so your systems react the moment something changes.' },
+  { ic: Shield, h: 'API Security & Rate Limiting', p: 'OAuth2, API keys, and rate limiting built in so your endpoints stay protected at scale.' },
 ]
 
 const stack = [
@@ -42,7 +43,7 @@ export default function ApiIntegration() {
               <h1>API Integration & Development Services</h1>
               <p className="lead">
                 From connecting third-party SaaS tools to building the public API that powers your own
-                ecosystem — we design integrations that are reliable, secure, and built to last.
+                ecosystem - we design integrations that are reliable, secure, and built to last.
               </p>
               <div className="pillars">
                 {['200+ Integrations Shipped', 'REST, GraphQL & Webhooks', '99.9% Integration Uptime', 'SOC 2-Ready Security'].map(p => (
@@ -76,7 +77,7 @@ export default function ApiIntegration() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function ApiIntegration() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -114,8 +115,8 @@ export default function ApiIntegration() {
               <p className="ch">SaaS / Integrations</p>
               <h3>Unifying a Fragmented Sales Stack Into One API Layer</h3>
               <p>
-                We built a central integration layer connecting a client's CRM to twelve third-party tools —
-                billing, email, calendars, and analytics — replacing brittle manual exports with real-time,
+                We built a central integration layer connecting a client's CRM to twelve third-party tools -
+                billing, email, calendars, and analytics - replacing brittle manual exports with real-time,
                 event-driven sync.
               </p>
               <ul>

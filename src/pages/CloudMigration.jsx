@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Compass, Map, Package, RefreshCw } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🗺️', h: 'Migration Assessment', p: 'Full audit of your current infrastructure to map dependencies before anything moves.' },
-  { ic: '📦', h: 'Phased Migration Execution', p: 'Workloads migrated in planned waves, validated at every step before cutover.' },
-  { ic: '🔄', h: 'Data Integrity Validation', p: 'Automated checks confirming every byte moved matches the source.' },
-  { ic: '🧭', h: 'Multi-Cloud Strategy', p: 'AWS, Azure, or GCP — recommendations based on your workload, not a vendor preference.' },
+  { ic: Map, h: 'Migration Assessment', p: 'Full audit of your current infrastructure to map dependencies before anything moves.' },
+  { ic: Package, h: 'Phased Migration Execution', p: 'Workloads migrated in planned waves, validated at every step before cutover.' },
+  { ic: RefreshCw, h: 'Data Integrity Validation', p: 'Automated checks confirming every byte moved matches the source.' },
+  { ic: Compass, h: 'Multi-Cloud Strategy', p: 'AWS, Azure, or GCP - recommendations based on your workload, not a vendor preference.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function CloudMigration() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Move Without the Downtime</p>
               <h1>Cloud Migration Services</h1>
               <p className="lead">
-                We migrate on-premise and legacy cloud workloads to modern infrastructure — planned in
+                We migrate on-premise and legacy cloud workloads to modern infrastructure - planned in
                 phases, tested at every step, so the business never feels the move.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function CloudMigration() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function CloudMigration() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -115,7 +116,7 @@ export default function CloudMigration() {
               <h3>Moving a Legacy System to the Cloud in Six Planned Waves</h3>
               <p>
                 We mapped every dependency in a client's 15-year-old on-prem system, then migrated it to
-                the cloud in six validated waves — with the business never noticing a disruption.
+                the cloud in six validated waves - with the business never noticing a disruption.
               </p>
               <ul>
                 {['Zero unplanned downtime across the full migration', '15-year-old system moved in 6 phased waves', '100% data integrity validated post-migration', '45% lower infrastructure costs post-migration'].map(b => <li key={b}>{b}</li>)}

@@ -2,18 +2,19 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { Bot, Building, CheckCircle2, DollarSign, Gamepad2, Globe, HeartPulse, Lock, Medal, Phone, RefreshCw, Rocket, Shield, ShoppingCart, Smartphone, Star, TrendingUp } from 'lucide-react'
 
 const trustBrands = ['MOBIUS','KINDER MORGAN','UTMB','WORLD COOP','camh','SAUDI BELL']
 
 const services = [
-  { ic: '📱', h: 'iOS App Development', p: 'Native Swift apps crafted for iPhone and iPad, optimized for App Store success.' },
-  { ic: '🤖', h: 'Android App Development', p: 'Kotlin-powered Android apps for phones, tablets, and emerging form factors.' },
-  { ic: '🔄', h: 'Cross-Platform Apps', p: 'React Native and Flutter apps sharing 90% of code across iOS and Android.' },
-  { ic: '🏢', h: 'Enterprise Mobile', p: 'Secure, MDM-ready apps for internal business operations and field teams.' },
-  { ic: '🛒', h: 'E-Commerce Apps', p: 'Mobile storefronts with seamless checkout, AR try-on, and loyalty features.' },
-  { ic: '🏥', h: 'Healthcare Apps', p: 'HIPAA-compliant patient and provider apps with EHR integration.' },
-  { ic: '💰', h: 'Fintech Apps', p: 'Banking, payment, and investment apps with PCI DSS compliance baked in.' },
-  { ic: '🎮', h: 'Gaming Apps', p: 'Casual to mid-core mobile games with Unity, Godot, and native game loops.' },
+  { ic: Smartphone, h: 'iOS App Development', p: 'Native Swift apps crafted for iPhone and iPad, optimized for App Store success.' },
+  { ic: Bot, h: 'Android App Development', p: 'Kotlin-powered Android apps for phones, tablets, and emerging form factors.' },
+  { ic: RefreshCw, h: 'Cross-Platform Apps', p: 'React Native and Flutter apps sharing 90% of code across iOS and Android.' },
+  { ic: Building, h: 'Enterprise Mobile', p: 'Secure, MDM-ready apps for internal business operations and field teams.' },
+  { ic: ShoppingCart, h: 'E-Commerce Apps', p: 'Mobile storefronts with seamless checkout, AR try-on, and loyalty features.' },
+  { ic: HeartPulse, h: 'Healthcare Apps', p: 'HIPAA-compliant patient and provider apps with EHR integration.' },
+  { ic: DollarSign, h: 'Fintech Apps', p: 'Banking, payment, and investment apps with PCI DSS compliance baked in.' },
+  { ic: Gamepad2, h: 'Gaming Apps', p: 'Casual to mid-core mobile games with Unity, Godot, and native game loops.' },
 ]
 
 const portfolioCases = [
@@ -46,10 +47,10 @@ const stackData = {
 }
 
 const certifications = [
-  { ic: '✅', h: 'HIPAA Compliant', p: 'Healthcare-grade data security for patient apps.' },
-  { ic: '🔒', h: 'PCI DSS Ready', p: 'Payment security for fintech and e-commerce.' },
-  { ic: '🛡️', h: 'SOC 2 Type II', p: 'Enterprise data handling and security controls.' },
-  { ic: '🌍', h: 'GDPR Compliant', p: 'European data privacy regulations built in.' },
+  { ic: CheckCircle2, h: 'HIPAA Compliant', p: 'Healthcare-grade data security for patient apps.' },
+  { ic: Lock, h: 'PCI DSS Ready', p: 'Payment security for fintech and e-commerce.' },
+  { ic: Shield, h: 'SOC 2 Type II', p: 'Enterprise data handling and security controls.' },
+  { ic: Globe, h: 'GDPR Compliant', p: 'European data privacy regulations built in.' },
 ]
 
 export default function MobileApp() {
@@ -72,7 +73,7 @@ export default function MobileApp() {
           <div className="hero-btns">
             <Link to="/" className="btn">Get a Free Quote</Link>
             <a href="tel:+18325550190" className="call-link">
-              <span className="c">📞</span>
+              <span className="c"><Phone size={16} strokeWidth={1.75} /></span>
               +1 (832) 555-0190
             </a>
           </div>
@@ -87,10 +88,10 @@ export default function MobileApp() {
             {trustBrands.map(b => <div key={b} className="cell">{b}</div>)}
           </div>
           <div className="tstats">
-            <div className="it">⭐ Clutch <span className="muted">4.8 Rating</span></div>
-            <div className="it">🏆 Inc. 5000 <span className="muted">Fastest Growing</span></div>
-            <div className="it">🥇 GoodFirms <span className="muted">Leader 2025</span></div>
-            <div className="it">🚀 Deloitte <span className="muted">Fast 50</span></div>
+            <div className="it"><Star size={16} strokeWidth={1.75} /> Clutch <span className="muted">4.8 Rating</span></div>
+            <div className="it"><TrendingUp size={16} strokeWidth={1.75} /> Inc. 5000 <span className="muted">Fastest Growing</span></div>
+            <div className="it"><Medal size={16} strokeWidth={1.75} /> GoodFirms <span className="muted">Leader 2025</span></div>
+            <div className="it"><Rocket size={16} strokeWidth={1.75} /> Deloitte <span className="muted">Fast 50</span></div>
           </div>
         </div>
       </div>
@@ -104,7 +105,7 @@ export default function MobileApp() {
               <h2>Why ExpinSoft for Mobile App Development?</h2>
               <p style={{ marginTop: 16 }}>
                 We've shipped 800+ mobile apps across every major industry. Our engineers are App Store veterans who
-                understand what it takes to launch successfully — and keep users coming back.
+                understand what it takes to launch successfully - and keep users coming back.
               </p>
             </div>
             <ConsultForm title={'Start Your App\nProject'} />
@@ -113,7 +114,7 @@ export default function MobileApp() {
           <div className="icards">
             {services.map(s => (
               <div key={s.h} className="icard">
-                <div className="ic">{s.ic}</div>
+                <div className="ic"><s.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{s.h}</h3>
                 <p>{s.p}</p>
               </div>
@@ -170,7 +171,7 @@ export default function MobileApp() {
           <div className="icards">
             {certifications.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -261,7 +262,7 @@ export default function MobileApp() {
 
       <PricingSection
         title="Mobile App Investment Plans"
-        subtitle="From a lightweight MVP to a full-scale enterprise app — transparent packages with no hidden fees. Every project starts with a free discovery call."
+        subtitle="From a lightweight MVP to a full-scale enterprise app - transparent packages with no hidden fees. Every project starts with a free discovery call."
       />
 
       {/* CTA */}

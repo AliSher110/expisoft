@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Building, Link2, Lock, Settings } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🏢', h: 'ERP & Internal Systems', p: 'Custom ERP, HR, and operations platforms built around how your teams actually work — not a rigid off-the-shelf template.' },
-  { ic: '🔗', h: 'Legacy System Integration', p: 'Bridge decades-old systems with modern APIs so you modernize without a risky rip-and-replace migration.' },
-  { ic: '🔐', h: 'Enterprise Security & SSO', p: 'Active Directory / SAML single sign-on, role-based access control, and audit logging built in from day one.' },
-  { ic: '⚙️', h: 'Workflow Automation', p: 'Replace spreadsheets and manual approvals with automated pipelines that scale as your headcount grows.' },
+  { ic: Building, h: 'ERP & Internal Systems', p: 'Custom ERP, HR, and operations platforms built around how your teams actually work - not a rigid off-the-shelf template.' },
+  { ic: Link2, h: 'Legacy System Integration', p: 'Bridge decades-old systems with modern APIs so you modernize without a risky rip-and-replace migration.' },
+  { ic: Lock, h: 'Enterprise Security & SSO', p: 'Active Directory / SAML single sign-on, role-based access control, and audit logging built in from day one.' },
+  { ic: Settings, h: 'Workflow Automation', p: 'Replace spreadsheets and manual approvals with automated pipelines that scale as your headcount grows.' },
 ]
 
 const stack = [
@@ -42,7 +43,7 @@ export default function EnterpriseSoftware() {
               <h1>Enterprise Software Development Services</h1>
               <p className="lead">
                 We build the internal systems, ERPs, and multi-tenant platforms that hold up under real
-                enterprise load — integrated with your existing infrastructure, not fighting against it.
+                enterprise load - integrated with your existing infrastructure, not fighting against it.
               </p>
               <div className="pillars">
                 {['500+ Enterprise Users Supported', '99.9% Uptime SLA', 'SOC 2 / HIPAA Ready', 'Legacy System Integration'].map(p => (
@@ -76,7 +77,7 @@ export default function EnterpriseSoftware() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function EnterpriseSoftware() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -112,10 +113,10 @@ export default function EnterpriseSoftware() {
           <div className="pf-case">
             <div>
               <p className="ch">SaaS / Enterprise CRM</p>
-              <h3>CRM Software — Multi-Tenant Platform for Software Houses</h3>
+              <h3>CRM Software - Multi-Tenant Platform for Software Houses</h3>
               <p>
                 A role-aware enterprise CRM with dedicated Super Admin, Company Owner, Project Manager, and
-                Sales Rep dashboards — giving every layer of the organization exactly the view and permissions they need.
+                Sales Rep dashboards - giving every layer of the organization exactly the view and permissions they need.
               </p>
               <ul>
                 {['Four distinct role-based dashboards', 'Real-time platform-wide analytics for admins', 'Predictive lead scoring for sales teams', 'AI-assisted pipeline automation'].map(b => <li key={b}>{b}</li>)}
@@ -142,7 +143,7 @@ export default function EnterpriseSoftware() {
 
       <PricingSection
         title="Enterprise Software Investment Plans"
-        subtitle="Transparent packages for internal tools, ERPs, and multi-tenant platforms — from a focused module to a full enterprise build. Every project starts with a free discovery call."
+        subtitle="Transparent packages for internal tools, ERPs, and multi-tenant platforms - from a focused module to a full enterprise build. Every project starts with a free discovery call."
       />
 
       <section className="sec" style={{ paddingTop: 0 }}>

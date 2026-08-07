@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, MessageCircle, Palette, Ruler, Target } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🎯', h: 'Brand Positioning', p: 'Clear, differentiated positioning based on real competitive research, not internal opinion.' },
-  { ic: '🎨', h: 'Visual Identity Design', p: 'Logo, color, and typography systems built to work everywhere from a favicon to a billboard.' },
-  { ic: '🗣️', h: 'Voice & Messaging', p: 'A documented voice and messaging framework your whole team can write in consistently.' },
-  { ic: '📐', h: 'Brand Guidelines & Rollout', p: 'A living brand guide plus hands-on rollout across your existing marketing and product surfaces.' },
+  { ic: Target, h: 'Brand Positioning', p: 'Clear, differentiated positioning based on real competitive research, not internal opinion.' },
+  { ic: Palette, h: 'Visual Identity Design', p: 'Logo, color, and typography systems built to work everywhere from a favicon to a billboard.' },
+  { ic: MessageCircle, h: 'Voice & Messaging', p: 'A documented voice and messaging framework your whole team can write in consistently.' },
+  { ic: Ruler, h: 'Brand Guidelines & Rollout', p: 'A living brand guide plus hands-on rollout across your existing marketing and product surfaces.' },
 ]
 
 const stack = [
@@ -42,7 +43,7 @@ export default function BrandStrategy() {
               <h1>Brand Strategy Services</h1>
               <p className="lead">
                 We help you define the positioning, voice, and visual identity that makes your brand
-                recognizable — then make sure it actually shows up consistently everywhere your customers meet you.
+                recognizable - then make sure it actually shows up consistently everywhere your customers meet you.
               </p>
               <div className="pillars">
                 {['Brand Positioning & Messaging', 'Visual Identity Systems', 'Voice & Tone Guidelines', 'Cross-Channel Consistency'].map(p => (
@@ -76,7 +77,7 @@ export default function BrandStrategy() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function BrandStrategy() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -115,7 +116,7 @@ export default function BrandStrategy() {
               <h3>Repositioning a Brand That Had Outgrown Its Own Story</h3>
               <p>
                 We ran competitive research, redefined a client's positioning and messaging, and rolled
-                out a new visual identity across every customer touchpoint — and inbound demand followed.
+                out a new visual identity across every customer touchpoint - and inbound demand followed.
               </p>
               <ul>
                 {['Inbound demo requests doubled within 4 months of relaunch', 'Full visual identity system rolled out across 12 touchpoints', 'Messaging framework adopted company-wide within 2 weeks', 'Brand recognition lift measured in follow-up customer survey'].map(b => <li key={b}>{b}</li>)}

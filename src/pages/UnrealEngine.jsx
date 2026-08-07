@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Globe, Monitor, Puzzle, Target } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🖥️', h: 'High-Fidelity Rendering', p: 'Lumen and Nanite pipelines tuned for visual quality without tanking frame rate.' },
-  { ic: '🧩', h: 'Blueprint & C++ Development', p: 'The right tool for the job — rapid iteration in Blueprints, performance-critical systems in C++.' },
-  { ic: '🌐', h: 'Multiplayer Networking', p: 'Replicated gameplay systems built for low-latency, competitive-grade multiplayer.' },
-  { ic: '🎯', h: 'Performance Profiling', p: 'Frame-by-frame optimization to hit target frame rates on your actual target hardware.' },
+  { ic: Monitor, h: 'High-Fidelity Rendering', p: 'Lumen and Nanite pipelines tuned for visual quality without tanking frame rate.' },
+  { ic: Puzzle, h: 'Blueprint & C++ Development', p: 'The right tool for the job - rapid iteration in Blueprints, performance-critical systems in C++.' },
+  { ic: Globe, h: 'Multiplayer Networking', p: 'Replicated gameplay systems built for low-latency, competitive-grade multiplayer.' },
+  { ic: Target, h: 'Performance Profiling', p: 'Frame-by-frame optimization to hit target frame rates on your actual target hardware.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function UnrealEngine() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>AAA-Grade Visuals</p>
               <h1>Unreal Engine Development Services</h1>
               <p className="lead">
-                We build high-fidelity games and interactive experiences in Unreal Engine — for teams
+                We build high-fidelity games and interactive experiences in Unreal Engine - for teams
                 that need console-quality visuals without a console-sized budget or team.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function UnrealEngine() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function UnrealEngine() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

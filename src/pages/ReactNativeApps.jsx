@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Bell, Camera, Compass, WifiOff } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🧭', h: 'Native Navigation', p: 'Smooth, platform-correct navigation and gestures using React Navigation and native transitions.' },
-  { ic: '🔔', h: 'Push Notifications', p: 'Real-time engagement via Firebase Cloud Messaging and Apple Push Notification service.' },
-  { ic: '📴', h: 'Offline-First Storage', p: 'Local persistence and background sync so your app works reliably with zero connectivity.' },
-  { ic: '📷', h: 'Native Device APIs', p: 'Camera, biometrics, geolocation, and Bluetooth access through native modules when JS isn\'t enough.' },
+  { ic: Compass, h: 'Native Navigation', p: 'Smooth, platform-correct navigation and gestures using React Navigation and native transitions.' },
+  { ic: Bell, h: 'Push Notifications', p: 'Real-time engagement via Firebase Cloud Messaging and Apple Push Notification service.' },
+  { ic: WifiOff, h: 'Offline-First Storage', p: 'Local persistence and background sync so your app works reliably with zero connectivity.' },
+  { ic: Camera, h: 'Native Device APIs', p: 'Camera, biometrics, geolocation, and Bluetooth access through native modules when JS isn\'t enough.' },
 ]
 
 const stack = [
-  { h: 'React Native', p: 'The core framework — JavaScript and React rendering to real native UI components.', hot: true },
+  { h: 'React Native', p: 'The core framework - JavaScript and React rendering to real native UI components.', hot: true },
   { h: 'Expo', p: 'Managed workflow for faster builds, OTA updates, and simplified native module access.' },
   { h: 'TypeScript', p: 'Type-safe app logic that catches bugs before they ever reach a device.' },
   { h: 'Redux / Zustand', p: 'Predictable state management for apps with complex, shared application state.' },
@@ -76,7 +77,7 @@ export default function ReactNativeApps() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function ReactNativeApps() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -112,7 +113,7 @@ export default function ReactNativeApps() {
           <div className="pf-case">
             <div>
               <p className="ch">Healthcare / Consumer</p>
-              <h3>Tamreeni — HIPAA-Compliant Telehealth App</h3>
+              <h3>Tamreeni - HIPAA-Compliant Telehealth App</h3>
               <p>
                 A React Native patient management and telemedicine app built for a healthcare platform,
                 handling HIPAA-sensitive data with a single codebase across iOS and Android.
@@ -142,7 +143,7 @@ export default function ReactNativeApps() {
 
       <PricingSection
         title="React Native App Investment Plans"
-        subtitle="Transparent packages for React Native builds — from a lightweight MVP to a full enterprise app. Every project starts with a free discovery call."
+        subtitle="Transparent packages for React Native builds - from a lightweight MVP to a full enterprise app. Every project starts with a free discovery call."
         gray={false}
       />
 

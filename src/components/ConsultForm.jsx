@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { CheckCircle2 } from 'lucide-react'
 
 export default function ConsultForm({ title = "Let's Discuss\nYour Project" }) {
   const [sent, setSent] = useState(false)
@@ -12,7 +13,7 @@ export default function ConsultForm({ title = "Let's Discuss\nYour Project" }) {
     <div className="form-card">
       <h3 style={{ whiteSpace: 'pre-line' }}>{title}</h3>
       {sent ? (
-        <p className="success-msg">✓ Thank you! We'll be in touch shortly.</p>
+        <p className="success-msg"><CheckCircle2 size={18} strokeWidth={1.75} /> Thank you! We'll be in touch shortly.</p>
       ) : (
         <form onSubmit={onSubmit}>
           <div className="fld">

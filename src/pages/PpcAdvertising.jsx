@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, DollarSign, FlaskConical, Target, TrendingUp } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🎯', h: 'Campaign Strategy & Setup', p: 'Google, Meta, and LinkedIn campaigns structured around your actual sales funnel.' },
-  { ic: '📈', h: 'Conversion Tracking', p: 'Properly configured tracking so you know which ads actually drive revenue, not just clicks.' },
-  { ic: '🧪', h: 'Continuous A/B Testing', p: 'Ad creative, copy, and landing pages tested on a rolling basis to cut cost-per-lead.' },
-  { ic: '💰', h: 'Budget Optimization', p: 'Spend reallocated weekly toward what\'s actually converting, not left on autopilot.' },
+  { ic: Target, h: 'Campaign Strategy & Setup', p: 'Google, Meta, and LinkedIn campaigns structured around your actual sales funnel.' },
+  { ic: TrendingUp, h: 'Conversion Tracking', p: 'Properly configured tracking so you know which ads actually drive revenue, not just clicks.' },
+  { ic: FlaskConical, h: 'Continuous A/B Testing', p: 'Ad creative, copy, and landing pages tested on a rolling basis to cut cost-per-lead.' },
+  { ic: DollarSign, h: 'Budget Optimization', p: 'Spend reallocated weekly toward what\'s actually converting, not left on autopilot.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function PpcAdvertising() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Every Dollar, Accounted For</p>
               <h1>PPC Advertising Services</h1>
               <p className="lead">
-                We run paid search and social campaigns built around a single question — what does this
+                We run paid search and social campaigns built around a single question - what does this
                 cost us per qualified lead, and how do we bring that number down every month.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function PpcAdvertising() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function PpcAdvertising() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

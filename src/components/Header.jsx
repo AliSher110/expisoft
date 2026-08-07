@@ -156,7 +156,7 @@ export default function Header() {
           <div className="mega-inner">
             <div className="mega-promo">
               <h3>Build Something Great</h3>
-              <p>From idea to launch — ExpinSoft engineers intelligent digital products that scale.</p>
+              <p>From idea to launch - ExpinSoft engineers intelligent digital products that scale.</p>
               <img
                 src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=480&q=80"
                 alt="Team at work"

@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Banknote, BarChart3, Target, Zap } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🎯', h: 'Core Loop Design', p: 'Tight, addictive gameplay loops prototyped and tested before full production begins.' },
-  { ic: '📊', h: 'Data-Driven Iteration', p: 'A/B tested onboarding, difficulty curves, and monetization prompts based on real player data.' },
-  { ic: '💵', h: 'Ad & IAP Monetization', p: 'Rewarded video, interstitials, and IAP integrated without tanking retention.' },
-  { ic: '⚡', h: 'Lightweight Builds', p: 'Small download sizes and fast load times that keep players from bouncing before they start.' },
+  { ic: Target, h: 'Core Loop Design', p: 'Tight, addictive gameplay loops prototyped and tested before full production begins.' },
+  { ic: BarChart3, h: 'Data-Driven Iteration', p: 'A/B tested onboarding, difficulty curves, and monetization prompts based on real player data.' },
+  { ic: Banknote, h: 'Ad & IAP Monetization', p: 'Rewarded video, interstitials, and IAP integrated without tanking retention.' },
+  { ic: Zap, h: 'Lightweight Builds', p: 'Small download sizes and fast load times that keep players from bouncing before they start.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function CasualMobileGames() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Simple to Play, Hard to Put Down</p>
               <h1>Casual Mobile Game Development Services</h1>
               <p className="lead">
-                We build casual mobile games engineered for retention — fast load times, tight core
+                We build casual mobile games engineered for retention - fast load times, tight core
                 loops, and monetization that doesn't ruin the fun.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function CasualMobileGames() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function CasualMobileGames() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -115,7 +116,7 @@ export default function CasualMobileGames() {
               <h3>Tuning a Core Loop Until Retention Beat the Genre Average</h3>
               <p>
                 We prototyped, A/B tested, and iterated on a puzzle game's core loop and monetization
-                until retention and revenue both cleared genre benchmarks — then it climbed the charts.
+                until retention and revenue both cleared genre benchmarks - then it climbed the charts.
               </p>
               <ul>
                 {['Reached #3 in Games category within 6 weeks', 'Day-30 retention 2x above genre benchmark', 'Load time under 2 seconds on mid-range devices', 'Monetization tuned via 40+ A/B tests post-launch'].map(b => <li key={b}>{b}</li>)}

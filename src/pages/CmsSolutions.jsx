@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Blocks, Globe, PenLine, Zap } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🧱', h: 'Headless CMS Integration', p: 'Sanity, Contentful, or Strapi wired into your frontend with a clean, structured content model.' },
-  { ic: '✍️', h: 'Editor-Friendly Workflows', p: 'Visual editing, drafts, and approval flows your marketing team can actually use.' },
-  { ic: '🌍', h: 'Multi-Language Publishing', p: 'Localized content models built for global rollout from the start.' },
-  { ic: '⚡', h: 'Performance-First Delivery', p: 'Cached, CDN-backed content delivery so a CMS never becomes your bottleneck.' },
+  { ic: Blocks, h: 'Headless CMS Integration', p: 'Sanity, Contentful, or Strapi wired into your frontend with a clean, structured content model.' },
+  { ic: PenLine, h: 'Editor-Friendly Workflows', p: 'Visual editing, drafts, and approval flows your marketing team can actually use.' },
+  { ic: Globe, h: 'Multi-Language Publishing', p: 'Localized content models built for global rollout from the start.' },
+  { ic: Zap, h: 'Performance-First Delivery', p: 'Cached, CDN-backed content delivery so a CMS never becomes your bottleneck.' },
 ]
 
 const stack = [
@@ -42,7 +43,7 @@ export default function CmsSolutions() {
               <h1>CMS Solutions & Development Services</h1>
               <p className="lead">
                 We build and integrate content management systems that let your marketing team ship
-                changes without waiting on engineering — without sacrificing performance or design control.
+                changes without waiting on engineering - without sacrificing performance or design control.
               </p>
               <div className="pillars">
                 {['Headless & Traditional CMS', 'Non-Technical Editor Workflows', 'Multi-Language Publishing', 'Fast, Cached Content Delivery'].map(p => (
@@ -76,7 +77,7 @@ export default function CmsSolutions() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function CmsSolutions() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -115,7 +116,7 @@ export default function CmsSolutions() {
               <h3>Giving a Marketing Team Full Control Without Touching Code</h3>
               <p>
                 We integrated a headless CMS into a client's Next.js site with a structured content model,
-                letting their marketing team publish and localize pages directly — no engineering ticket required.
+                letting their marketing team publish and localize pages directly - no engineering ticket required.
               </p>
               <ul>
                 {['Publish time cut from 3 days to under 10 minutes', 'Marketing team fully self-sufficient post-launch', 'Multi-language rollout across 5 markets', 'Page speed unaffected by the CMS integration'].map(b => <li key={b}>{b}</li>)}

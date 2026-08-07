@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Droplet, Landmark, Monitor, TrendingUp } from 'lucide-react'
 
 const capabilities = [
-  { ic: '💧', h: 'Liquidity Protocols', p: 'AMMs and liquidity pools designed for capital efficiency and minimal slippage.' },
-  { ic: '🏦', h: 'Lending & Borrowing', p: 'Collateralized lending markets with battle-tested liquidation mechanics.' },
-  { ic: '📈', h: 'Yield & Staking Products', p: 'Auto-compounding vaults and staking mechanisms that keep users engaged.' },
-  { ic: '🖥️', h: 'Web3 Front-Ends', p: 'Wallet-connected interfaces that make on-chain actions feel like using a normal app.' },
+  { ic: Droplet, h: 'Liquidity Protocols', p: 'AMMs and liquidity pools designed for capital efficiency and minimal slippage.' },
+  { ic: Landmark, h: 'Lending & Borrowing', p: 'Collateralized lending markets with battle-tested liquidation mechanics.' },
+  { ic: TrendingUp, h: 'Yield & Staking Products', p: 'Auto-compounding vaults and staking mechanisms that keep users engaged.' },
+  { ic: Monitor, h: 'Web3 Front-Ends', p: 'Wallet-connected interfaces that make on-chain actions feel like using a normal app.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function DefiPlatforms() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Finance, Rebuilt On-Chain</p>
               <h1>DeFi Platform Development Services</h1>
               <p className="lead">
-                We build decentralized finance platforms — lending protocols, DEXs, and yield products —
+                We build decentralized finance platforms - lending protocols, DEXs, and yield products -
                 engineered for security, liquidity, and a user experience that doesn't require a crypto degree.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function DefiPlatforms() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function DefiPlatforms() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

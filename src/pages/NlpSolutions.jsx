@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Globe, MessageSquare, Search, Tag } from 'lucide-react'
 
 const capabilities = [
-  { ic: '💬', h: 'Conversational AI', p: 'Chatbots and virtual assistants built on LLMs, grounded in your own data via RAG.' },
-  { ic: '🏷️', h: 'Text Classification & Extraction', p: 'Automatically tag, route, and extract structured data from unstructured text.' },
-  { ic: '🔍', h: 'Semantic Search', p: 'Vector-based search that understands meaning, not just keyword matches.' },
-  { ic: '🌐', h: 'Multilingual Processing', p: 'NLP pipelines that work across languages, not just English.' },
+  { ic: MessageSquare, h: 'Conversational AI', p: 'Chatbots and virtual assistants built on LLMs, grounded in your own data via RAG.' },
+  { ic: Tag, h: 'Text Classification & Extraction', p: 'Automatically tag, route, and extract structured data from unstructured text.' },
+  { ic: Search, h: 'Semantic Search', p: 'Vector-based search that understands meaning, not just keyword matches.' },
+  { ic: Globe, h: 'Multilingual Processing', p: 'NLP pipelines that work across languages, not just English.' },
 ]
 
 const stack = [
@@ -42,7 +43,7 @@ export default function NlpSolutions() {
               <h1>NLP Solutions & Development Services</h1>
               <p className="lead">
                 We build natural language processing systems that read, classify, summarize, and respond
-                to text and speech — powering chatbots, document intelligence, and search that actually
+                to text and speech - powering chatbots, document intelligence, and search that actually
                 understands intent.
               </p>
               <div className="pillars">
@@ -77,7 +78,7 @@ export default function NlpSolutions() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -96,7 +97,7 @@ export default function NlpSolutions() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

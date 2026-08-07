@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Cloud, Link2, RefreshCw, Search } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🔍', h: 'Legacy Code Audits', p: 'Deep-dive assessments that map technical debt, security gaps, and modernization priorities before a single line changes.' },
-  { ic: '🔄', h: 'Incremental Refactoring', p: 'Strangler-fig migrations that modernize piece by piece, so the business keeps running the whole time.' },
-  { ic: '☁️', h: 'Legacy-to-Cloud Migration', p: 'Move monoliths off aging on-prem infrastructure onto scalable, cost-efficient cloud platforms.' },
-  { ic: '🔗', h: 'API-First Re-Architecture', p: 'Wrap and expose legacy systems through modern APIs so new products can build on top of them safely.' },
+  { ic: Search, h: 'Legacy Code Audits', p: 'Deep-dive assessments that map technical debt, security gaps, and modernization priorities before a single line changes.' },
+  { ic: RefreshCw, h: 'Incremental Refactoring', p: 'Strangler-fig migrations that modernize piece by piece, so the business keeps running the whole time.' },
+  { ic: Cloud, h: 'Legacy-to-Cloud Migration', p: 'Move monoliths off aging on-prem infrastructure onto scalable, cost-efficient cloud platforms.' },
+  { ic: Link2, h: 'API-First Re-Architecture', p: 'Wrap and expose legacy systems through modern APIs so new products can build on top of them safely.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function LegacyModernization() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Modernize Without the Risk</p>
               <h1>Legacy System Modernization Services</h1>
               <p className="lead">
-                We help you evolve decades-old systems into modern, maintainable platforms — without a
+                We help you evolve decades-old systems into modern, maintainable platforms - without a
                 risky rip-and-replace, and without disrupting the business that depends on them.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function LegacyModernization() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function LegacyModernization() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -115,7 +116,7 @@ export default function LegacyModernization() {
               <h3>From Aging On-Prem Monolith to a Modern Cloud Platform</h3>
               <p>
                 We audited, re-architected, and migrated a 20-year-old on-premise operations system to a
-                cloud-native platform in phased releases — with zero unplanned downtime and full data integrity
+                cloud-native platform in phased releases - with zero unplanned downtime and full data integrity
                 preserved at every step.
               </p>
               <ul>
@@ -143,7 +144,7 @@ export default function LegacyModernization() {
 
       <PricingSection
         title="Legacy Modernization Investment Plans"
-        subtitle="Transparent packages for audits, phased migrations, and full re-platforming — scoped around your risk tolerance and timeline. Every engagement starts with a free discovery call."
+        subtitle="Transparent packages for audits, phased migrations, and full re-platforming - scoped around your risk tolerance and timeline. Every engagement starts with a free discovery call."
       />
 
       <section className="sec" style={{ paddingTop: 0 }}>

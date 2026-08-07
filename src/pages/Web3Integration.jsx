@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, CreditCard, Lock, Satellite, Wallet } from 'lucide-react'
 
 const capabilities = [
-  { ic: '👛', h: 'Wallet Integration', p: 'MetaMask, WalletConnect, and Coinbase Wallet support added to your existing frontend.' },
-  { ic: '🔐', h: 'Token-Gated Access', p: 'Unlock content, features, or communities based on on-chain token or NFT ownership.' },
-  { ic: '📡', h: 'On-Chain Data Indexing', p: 'Real-time on-chain data surfaced in your app without users touching a block explorer.' },
-  { ic: '💳', h: 'Fiat-to-Crypto On-Ramps', p: 'Let non-crypto-native users buy in with a card, no exchange account required.' },
+  { ic: Wallet, h: 'Wallet Integration', p: 'MetaMask, WalletConnect, and Coinbase Wallet support added to your existing frontend.' },
+  { ic: Lock, h: 'Token-Gated Access', p: 'Unlock content, features, or communities based on on-chain token or NFT ownership.' },
+  { ic: Satellite, h: 'On-Chain Data Indexing', p: 'Real-time on-chain data surfaced in your app without users touching a block explorer.' },
+  { ic: CreditCard, h: 'Fiat-to-Crypto On-Ramps', p: 'Let non-crypto-native users buy in with a card, no exchange account required.' },
 ]
 
 const stack = [
@@ -42,7 +43,7 @@ export default function Web3Integration() {
               <h1>Web3 Integration Services</h1>
               <p className="lead">
                 We integrate wallet connections, on-chain data, and token-gated features into existing
-                products — so you can add Web3 capabilities without rebuilding your app from scratch.
+                products - so you can add Web3 capabilities without rebuilding your app from scratch.
               </p>
               <div className="pillars">
                 {['Wallet Connect Integration', 'Token-Gated Access', 'On-Chain Data Indexing', 'Fiat-to-Crypto On-Ramps'].map(p => (
@@ -76,7 +77,7 @@ export default function Web3Integration() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function Web3Integration() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

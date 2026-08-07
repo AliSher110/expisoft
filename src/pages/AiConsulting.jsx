@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Map, Scale, Search, Shield } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🔎', h: 'AI Opportunity Assessment', p: 'Audit your data, workflows, and tooling to find the highest-ROI AI use cases for your business.' },
-  { ic: '🗺️', h: 'Roadmap & Prioritization', p: 'A phased implementation plan that sequences quick wins ahead of longer-term bets.' },
-  { ic: '⚖️', h: 'Build vs. Buy Guidance', p: 'Honest recommendations on when to build custom models versus integrate an existing API.' },
-  { ic: '🛡️', h: 'Responsible AI Governance', p: 'Bias testing, data privacy review, and compliance guardrails built into every recommendation.' },
+  { ic: Search, h: 'AI Opportunity Assessment', p: 'Audit your data, workflows, and tooling to find the highest-ROI AI use cases for your business.' },
+  { ic: Map, h: 'Roadmap & Prioritization', p: 'A phased implementation plan that sequences quick wins ahead of longer-term bets.' },
+  { ic: Scale, h: 'Build vs. Buy Guidance', p: 'Honest recommendations on when to build custom models versus integrate an existing API.' },
+  { ic: Shield, h: 'Responsible AI Governance', p: 'Bias testing, data privacy review, and compliance guardrails built into every recommendation.' },
 ]
 
 const stack = [
@@ -42,7 +43,7 @@ export default function AiConsulting() {
               <h1>AI Consulting Services</h1>
               <p className="lead">
                 Before we write a line of code, we help you identify which AI use cases are actually
-                worth building — and which aren't — so your investment lands on measurable business outcomes.
+                worth building - and which aren't - so your investment lands on measurable business outcomes.
               </p>
               <div className="pillars">
                 {['AI Readiness Assessments', 'Use-Case Prioritization', 'Build vs. Buy Guidance', 'Responsible AI Governance'].map(p => (
@@ -76,7 +77,7 @@ export default function AiConsulting() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function AiConsulting() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

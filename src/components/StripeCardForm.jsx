@@ -40,7 +40,7 @@ export default function StripeCardForm({ amount, planName, billing, onSuccess })
 
     // NOTE: paymentMethod.id is now safely tokenized client-side.
     // Completing the actual charge requires a backend endpoint that creates
-    // and confirms a Stripe PaymentIntent with this paymentMethod.id — that
+    // and confirms a Stripe PaymentIntent with this paymentMethod.id - that
     // step needs a server (Stripe does not allow secret-key calls from the browser).
     // Wire your backend call in here, e.g.:
     //   const res = await fetch('/api/create-payment-intent', { method: 'POST', body: JSON.stringify({ amount, paymentMethodId: paymentMethod.id }) })

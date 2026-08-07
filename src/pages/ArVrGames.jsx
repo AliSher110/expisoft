@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Glasses, Hand, Smartphone, Target } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🥽', h: 'Immersive Gameplay Design', p: 'Mechanics designed around comfort, presence, and natural interaction, not retrofitted from flat-screen games.' },
-  { ic: '✋', h: 'Hand & Controller Tracking', p: 'Precise, low-latency tracking that makes in-headset interaction feel natural.' },
-  { ic: '📱', h: 'Mobile AR Experiences', p: 'ARKit and ARCore experiences that work reliably across a wide range of devices.' },
-  { ic: '🎯', h: 'Performance Optimization', p: 'Frame rates tuned to headset-specific comfort thresholds to avoid motion sickness.' },
+  { ic: Glasses, h: 'Immersive Gameplay Design', p: 'Mechanics designed around comfort, presence, and natural interaction, not retrofitted from flat-screen games.' },
+  { ic: Hand, h: 'Hand & Controller Tracking', p: 'Precise, low-latency tracking that makes in-headset interaction feel natural.' },
+  { ic: Smartphone, h: 'Mobile AR Experiences', p: 'ARKit and ARCore experiences that work reliably across a wide range of devices.' },
+  { ic: Target, h: 'Performance Optimization', p: 'Frame rates tuned to headset-specific comfort thresholds to avoid motion sickness.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function ArVrGames() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Games Built for Immersion</p>
               <h1>AR/VR Game Development Services</h1>
               <p className="lead">
-                We build AR and VR games and experiences for Quest, Vision Pro, and mobile AR — designed
+                We build AR and VR games and experiences for Quest, Vision Pro, and mobile AR - designed
                 around comfort and presence, not just porting a flat-screen game into a headset.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function ArVrGames() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function ArVrGames() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

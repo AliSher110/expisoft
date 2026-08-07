@@ -4,7 +4,7 @@ const sections = [
   {
     h2: 'Information We Collect',
     body: [
-      'We collect information you provide directly to us — such as your name, email address, phone number, and project details — when you submit a contact form, request a quote, or communicate with our team.',
+      'We collect information you provide directly to us - such as your name, email address, phone number, and project details - when you submit a contact form, request a quote, or communicate with our team.',
       'We also automatically collect limited technical information when you visit our site, including your IP address, browser type, device type, and pages viewed, to help us understand how our site is used and to keep it secure.',
     ],
   },
@@ -24,7 +24,7 @@ const sections = [
   {
     h2: 'Payment Processors',
     body: [
-      'When you make a payment through our site, your payment details are processed directly by our third-party payment processors, including Stripe and PayPal. We do not store your full card number, CVV, or other sensitive payment credentials on our own servers — that data is handled under each processor\'s own privacy policy and security standards (including PCI-DSS compliance).',
+      'When you make a payment through our site, your payment details are processed directly by our third-party payment processors, including Stripe and PayPal. We do not store your full card number, CVV, or other sensitive payment credentials on our own servers - that data is handled under each processor\'s own privacy policy and security standards (including PCI-DSS compliance).',
     ],
   },
   {

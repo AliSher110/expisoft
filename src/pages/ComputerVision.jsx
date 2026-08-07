@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Camera, Factory, FileText, Settings } from 'lucide-react'
 
 const capabilities = [
-  { ic: '📷', h: 'Object Detection & Tracking', p: 'Real-time detection and tracking tuned to your specific objects and environment.' },
-  { ic: '🏭', h: 'Automated Quality Control', p: 'Vision systems that catch defects on a production line faster and more consistently than manual inspection.' },
-  { ic: '📄', h: 'Document & OCR Processing', p: 'Extract structured data from scanned documents, forms, and receipts automatically.' },
-  { ic: '⚙️', h: 'Edge Deployment', p: 'Models optimized to run on-device for low-latency, offline-capable inference.' },
+  { ic: Camera, h: 'Object Detection & Tracking', p: 'Real-time detection and tracking tuned to your specific objects and environment.' },
+  { ic: Factory, h: 'Automated Quality Control', p: 'Vision systems that catch defects on a production line faster and more consistently than manual inspection.' },
+  { ic: FileText, h: 'Document & OCR Processing', p: 'Extract structured data from scanned documents, forms, and receipts automatically.' },
+  { ic: Settings, h: 'Edge Deployment', p: 'Models optimized to run on-device for low-latency, offline-capable inference.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function ComputerVision() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Sight for Your Software</p>
               <h1>Computer Vision Development Services</h1>
               <p className="lead">
-                We build computer vision systems that detect, classify, and track objects in real time —
+                We build computer vision systems that detect, classify, and track objects in real time -
                 from quality control on a production line to automated document processing.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function ComputerVision() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function ComputerVision() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

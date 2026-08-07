@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Fuel, Link2, ScrollText, Search } from 'lucide-react'
 
 const capabilities = [
-  { ic: '📜', h: 'Custom Contract Development', p: 'Solidity and Rust contracts built around your exact business logic, not a copy-pasted template.' },
-  { ic: '🔍', h: 'Security Audits', p: 'Line-by-line review and automated analysis to catch vulnerabilities before mainnet deployment.' },
-  { ic: '⛽', h: 'Gas Optimization', p: 'Contracts refactored to cut transaction costs without changing behavior.' },
-  { ic: '🔗', h: 'Multi-Chain Deployment', p: 'Deploy across Ethereum, Polygon, and other EVM-compatible chains from one codebase.' },
+  { ic: ScrollText, h: 'Custom Contract Development', p: 'Solidity and Rust contracts built around your exact business logic, not a copy-pasted template.' },
+  { ic: Search, h: 'Security Audits', p: 'Line-by-line review and automated analysis to catch vulnerabilities before mainnet deployment.' },
+  { ic: Fuel, h: 'Gas Optimization', p: 'Contracts refactored to cut transaction costs without changing behavior.' },
+  { ic: Link2, h: 'Multi-Chain Deployment', p: 'Deploy across Ethereum, Polygon, and other EVM-compatible chains from one codebase.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function SmartContracts() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Code You Can Trust</p>
               <h1>Smart Contract Development Services</h1>
               <p className="lead">
-                We design, audit, and deploy smart contracts that handle real value — built for security
+                We design, audit, and deploy smart contracts that handle real value - built for security
                 first, since a bug in production isn't just a bug, it's a loss of funds.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function SmartContracts() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function SmartContracts() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

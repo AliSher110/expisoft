@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, BarChart3, Link2, PenLine, Wrench } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🔧', h: 'Technical SEO', p: 'Site speed, crawlability, and structured data fixes that remove the ceiling on your rankings.' },
-  { ic: '✍️', h: 'Content Strategy & Production', p: 'Search-intent-driven content briefs and writing that ranks and actually converts.' },
-  { ic: '🔗', h: 'Link Building', p: 'Earned and outreach-based backlinks from sites that move the needle, not link farms.' },
-  { ic: '📊', h: 'Rank & Traffic Reporting', p: 'Clear, monthly reporting tied to revenue impact, not vanity keyword rankings.' },
+  { ic: Wrench, h: 'Technical SEO', p: 'Site speed, crawlability, and structured data fixes that remove the ceiling on your rankings.' },
+  { ic: PenLine, h: 'Content Strategy & Production', p: 'Search-intent-driven content briefs and writing that ranks and actually converts.' },
+  { ic: Link2, h: 'Link Building', p: 'Earned and outreach-based backlinks from sites that move the needle, not link farms.' },
+  { ic: BarChart3, h: 'Rank & Traffic Reporting', p: 'Clear, monthly reporting tied to revenue impact, not vanity keyword rankings.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function SeoContent() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Rank Where It Matters</p>
               <h1>SEO & Content Marketing Services</h1>
               <p className="lead">
-                We build organic search strategies that compound — technical SEO, content that actually
+                We build organic search strategies that compound - technical SEO, content that actually
                 answers what people are searching for, and the link-building to back it up.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function SeoContent() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function SeoContent() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -115,7 +116,7 @@ export default function SeoContent() {
               <h3>Fixing Technical Debt Before Scaling Content Production</h3>
               <p>
                 We audited and fixed a client's technical SEO foundation first, then layered in a
-                search-intent-driven content strategy — compounding into a 3x traffic increase.
+                search-intent-driven content strategy - compounding into a 3x traffic increase.
               </p>
               <ul>
                 {['Organic traffic up 3x in 8 months', '40+ keywords ranking on page one', 'Technical SEO fixes recovered 25% of previously lost crawl budget', 'Content pipeline generating 15+ qualified leads a month'].map(b => <li key={b}>{b}</li>)}

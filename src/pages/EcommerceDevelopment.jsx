@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, BarChart3, CreditCard, Package, ShoppingCart } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🛒', h: 'Headless Storefronts', p: 'Decoupled frontends on Next.js connected to Shopify, commerce APIs, or a custom catalog.' },
-  { ic: '💳', h: 'Checkout & Payments', p: 'Secure, PCI-compliant checkout flows integrated with Stripe, PayPal, and regional gateways.' },
-  { ic: '📦', h: 'Inventory & Fulfillment', p: 'Real-time stock sync across channels so you never oversell.' },
-  { ic: '📊', h: 'Conversion Optimization', p: 'Fast product pages, smart search, and A/B-tested checkout flows that measurably lift conversion.' },
+  { ic: ShoppingCart, h: 'Headless Storefronts', p: 'Decoupled frontends on Next.js connected to Shopify, commerce APIs, or a custom catalog.' },
+  { ic: CreditCard, h: 'Checkout & Payments', p: 'Secure, PCI-compliant checkout flows integrated with Stripe, PayPal, and regional gateways.' },
+  { ic: Package, h: 'Inventory & Fulfillment', p: 'Real-time stock sync across channels so you never oversell.' },
+  { ic: BarChart3, h: 'Conversion Optimization', p: 'Fast product pages, smart search, and A/B-tested checkout flows that measurably lift conversion.' },
 ]
 
 const stack = [
@@ -76,7 +77,7 @@ export default function EcommerceDevelopment() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function EcommerceDevelopment() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

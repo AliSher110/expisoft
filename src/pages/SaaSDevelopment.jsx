@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, BarChart3, Building2, CreditCard, KeyRound } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🏗️', h: 'Multi-Tenant Architecture', p: 'Data isolation and tenant-aware infrastructure designed to scale from your first customer to your ten-thousandth.' },
-  { ic: '💳', h: 'Subscription Billing', p: 'Stripe and PayPal billing wired in from day one — plans, upgrades, proration, and dunning handled correctly.' },
-  { ic: '📊', h: 'Usage Analytics & Metering', p: 'Track feature adoption and usage-based pricing metrics so you can price and grow with confidence.' },
-  { ic: '🔑', h: 'Role-Based Access Control', p: 'Team seats, permissions, and admin controls your customers expect from a real B2B SaaS product.' },
+  { ic: Building2, h: 'Multi-Tenant Architecture', p: 'Data isolation and tenant-aware infrastructure designed to scale from your first customer to your ten-thousandth.' },
+  { ic: CreditCard, h: 'Subscription Billing', p: 'Stripe and PayPal billing wired in from day one - plans, upgrades, proration, and dunning handled correctly.' },
+  { ic: BarChart3, h: 'Usage Analytics & Metering', p: 'Track feature adoption and usage-based pricing metrics so you can price and grow with confidence.' },
+  { ic: KeyRound, h: 'Role-Based Access Control', p: 'Team seats, permissions, and admin controls your customers expect from a real B2B SaaS product.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function SaaSDevelopment() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Multi-Tenant, Subscription-Ready</p>
               <h1>SaaS Product Development Services</h1>
               <p className="lead">
-                From first prototype to a billing-ready multi-tenant platform — we build SaaS products
+                From first prototype to a billing-ready multi-tenant platform - we build SaaS products
                 engineered to onboard your first customer and your ten-thousandth without a rewrite.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function SaaSDevelopment() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function SaaSDevelopment() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -112,7 +113,7 @@ export default function SaaSDevelopment() {
           <div className="pf-case">
             <div>
               <p className="ch">SaaS / Fintech</p>
-              <h3>InvoicePilot — Subscription Billing Platform</h3>
+              <h3>InvoicePilot - Subscription Billing Platform</h3>
               <p>
                 A subscription billing and revenue recognition platform built for SaaS companies, with
                 usage-based pricing, automated dunning management, and native Stripe and PayPal sync.
@@ -142,7 +143,7 @@ export default function SaaSDevelopment() {
 
       <PricingSection
         title="SaaS Development Investment Plans"
-        subtitle="Transparent packages for SaaS builds — from a billing-ready MVP to a full multi-tenant platform. Every project starts with a free discovery call."
+        subtitle="Transparent packages for SaaS builds - from a billing-ready MVP to a full multi-tenant platform. Every project starts with a free discovery call."
       />
 
       <section className="sec" style={{ paddingTop: 0 }}>

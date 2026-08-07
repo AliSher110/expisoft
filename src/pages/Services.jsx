@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight } from 'lucide-react'
 
 const unsplash = (id) => `https://images.unsplash.com/photo-${id}?w=600&q=80`
 
@@ -158,7 +159,7 @@ export default function Services() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>What We Do</p>
               <h1>Full-Spectrum Software Development Services</h1>
               <p className="lead">
-                From a mobile app MVP to a Fortune 500 enterprise platform — ExpinSoft delivers
+                From a mobile app MVP to a Fortune 500 enterprise platform - ExpinSoft delivers
                 engineered software solutions that scale, perform, and delight users.
               </p>
               <div className="pillars">
@@ -190,7 +191,7 @@ export default function Services() {
             <span className="ghost">WHAT WE OFFER</span>
             <h2>Every Service, One Team</h2>
             <p style={{ color: 'var(--slate)', maxWidth: 760, marginTop: -12, marginBottom: 20 }}>
-              From your first landing page to a full custom platform — explore our complete service
+              From your first landing page to a full custom platform - explore our complete service
               catalog, organized by what you're trying to accomplish.
             </p>
           </div>
@@ -204,7 +205,7 @@ export default function Services() {
                     <img src={unsplash(s.img)} alt={s.h} loading="lazy" />
                     <div className="ov" />
                     <h3>{s.h}</h3>
-                    <span className="arr">→</span>
+                    <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                   </Link>
                 ))}
               </div>
@@ -219,7 +220,7 @@ export default function Services() {
                 <div key={s.h} className="scard">
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -233,7 +234,7 @@ export default function Services() {
                 <div key={s.h} className="scard">
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -250,7 +251,7 @@ export default function Services() {
             <div className="txt">
               <p className="eyebrow" style={{ color: 'var(--orange)', marginBottom: 12 }}>Get Started</p>
               <h2>Not Sure Which Service You Need?</h2>
-              <p>Talk to our team — we'll help you scope the right solution, estimate cost, and choose the best technology stack.</p>
+              <p>Talk to our team - we'll help you scope the right solution, estimate cost, and choose the best technology stack.</p>
               <Link to="/" className="btn" style={{ background: 'var(--orange)' }}>Book a Free Consultation</Link>
             </div>
             <div className="pic">

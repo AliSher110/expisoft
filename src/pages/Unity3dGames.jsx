@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, DollarSign, Gamepad2, Palette, Smartphone } from 'lucide-react'
 
 const capabilities = [
-  { ic: '🎮', h: 'Gameplay Programming', p: 'Core mechanics, physics, and systems built for responsiveness and feel, not just function.' },
-  { ic: '📱', h: 'Cross-Platform Optimization', p: 'Single codebase shipping to iOS, Android, PC, and console without a rewrite per platform.' },
-  { ic: '💰', h: 'Monetization & Live-Ops', p: 'IAP, ads, and events integrated cleanly, with the analytics to know what\'s working.' },
-  { ic: '🎨', h: 'Art & Asset Pipeline', p: 'Optimized asset pipelines that keep build sizes and load times under control.' },
+  { ic: Gamepad2, h: 'Gameplay Programming', p: 'Core mechanics, physics, and systems built for responsiveness and feel, not just function.' },
+  { ic: Smartphone, h: 'Cross-Platform Optimization', p: 'Single codebase shipping to iOS, Android, PC, and console without a rewrite per platform.' },
+  { ic: DollarSign, h: 'Monetization & Live-Ops', p: 'IAP, ads, and events integrated cleanly, with the analytics to know what\'s working.' },
+  { ic: Palette, h: 'Art & Asset Pipeline', p: 'Optimized asset pipelines that keep build sizes and load times under control.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function Unity3dGames() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Cross-Platform Games, One Engine</p>
               <h1>Unity 3D Game Development Services</h1>
               <p className="lead">
-                We build games in Unity for mobile, PC, and console — from prototype to a live, monetized
+                We build games in Unity for mobile, PC, and console - from prototype to a live, monetized
                 title, engineered to hit frame-rate targets on the hardware your players actually own.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function Unity3dGames() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function Unity3dGames() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

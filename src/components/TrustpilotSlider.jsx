@@ -1,3 +1,5 @@
+import { Star } from 'lucide-react'
+
 const reviews = [
   { name: 'Michael Chen', stars: 5, quote: 'Delivered exactly what we needed, on time. Communication was excellent throughout the whole build.', face: '1500648767791-00dcc994a43e' },
   { name: 'Sarah Owens', stars: 5, quote: 'Professional team, clean code, and they actually listened to our feedback at every stage.', face: '1544005313-94ddf0286df2' },
@@ -23,7 +25,9 @@ export default function TrustpilotSlider() {
       <div className="tp-head">
         <div className="tp-badge-row">
           <div className="tp-squares">
-            {[0, 1, 2, 3, 4].map(i => <span key={i} className="tp-square">★</span>)}
+            {[0, 1, 2, 3, 4].map(i => (
+              <span key={i} className="tp-square"><Star size={14} fill="#fff" color="#fff" /></span>
+            ))}
           </div>
           <div className="tp-badge-text">
             <b>Excellent</b>
@@ -36,7 +40,11 @@ export default function TrustpilotSlider() {
         <div className="tp-track">
           {loop.map((r, i) => (
             <div className="tp-card" key={`${r.name}-${i}`}>
-              <div className="tp-stars">{'★'.repeat(r.stars)}{'☆'.repeat(5 - r.stars)}</div>
+              <div className="tp-stars">
+                {[0, 1, 2, 3, 4].map(i => (
+                  <Star key={i} size={15} fill={i < r.stars ? '#00b67a' : 'none'} color="#00b67a" />
+                ))}
+              </div>
               <p className="tp-quote">"{r.quote}"</p>
               <div className="tp-who">
                 <img className="tp-avatar" src={`https://images.unsplash.com/photo-${r.face}?w=64&q=70`} alt={r.name} loading="lazy" />

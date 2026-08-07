@@ -6,7 +6,7 @@ import { blogPosts } from '../data/blogPosts'
 const featured = {
   tag: 'Industry Report',
   h: 'The State of Custom Software Development: 2026 Industry Report',
-  desc: 'We surveyed 200+ CTOs and engineering leaders to uncover the trends shaping how enterprises build, buy, and scale software this year — from AI-assisted development to the return of platform engineering.',
+  desc: 'We surveyed 200+ CTOs and engineering leaders to uncover the trends shaping how enterprises build, buy, and scale software this year - from AI-assisted development to the return of platform engineering.',
   img: '1515879218367-8466d910aaa4',
 }
 
@@ -31,7 +31,7 @@ export default function Insights() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Blog & Insights</p>
               <h1>Ideas Worth Reading</h1>
               <p className="lead">
-                Practical, engineering-led perspectives on mobile, AI, cloud, and software strategy —
+                Practical, engineering-led perspectives on mobile, AI, cloud, and software strategy -
                 written by the team that ships the projects, not a marketing desk.
               </p>
               <div className="pillars">
@@ -97,7 +97,7 @@ export default function Insights() {
             <div className="txt">
               <p className="eyebrow" style={{ color: 'var(--orange)', marginBottom: 12 }}>Stay in the Loop</p>
               <h2>Get New Articles in Your Inbox</h2>
-              <p>One email a month — engineering deep-dives, industry trends, and no sales pitches. Unsubscribe any time.</p>
+              <p>One email a month - engineering deep-dives, industry trends, and no sales pitches. Unsubscribe any time.</p>
               <Link to="/" className="btn" style={{ background: 'var(--orange)' }}>Subscribe to the Newsletter</Link>
             </div>
             <div className="pic">

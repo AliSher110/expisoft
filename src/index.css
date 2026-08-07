@@ -1,4 +1,4 @@
-/* ExpinSoft Global CSS — #0E7FF5 | #FF8C00 | #FFFFFF | #36454F */
+/* ExpinSoft Global CSS - #0E7FF5 | #FF8C00 | #FFFFFF | #36454F */
 :root{--primary:#0E7FF5;--primary-d:#0A63C2;--primary-tint:#e8f2fe;--orange:#FF8C00;--orange-d:#e07900;--orange-tint:#fff3e0;--navy:#36454F;--navy-2:#2d3c47;--card:#3a4e58;--card-2:#425a66;--ink:#36454F;--slate:#56657a;--line:#e6e9ef;--bg:#fff;--gray-bg:#f6f7f9}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -240,7 +240,7 @@ header.scrolled{background:#36454F;box-shadow:0 6px 24px rgba(0,0,0,.25);padding
 .rev-item span{font-size:13px;color:var(--slate)}
 .cinfo{margin-top:20px}
 .cinfo div{display:flex;align-items:center;gap:12px;color:var(--ink);font-size:15px;margin-bottom:12px}
-.cinfo .ic{color:var(--primary)}
+.cinfo .ic{color:var(--primary);display:inline-flex;vertical-align:middle}
 .icard a{color:inherit;text-decoration:none}
 .icard a:hover{color:var(--primary)}
 form .fld{margin-bottom:26px}
@@ -266,6 +266,7 @@ footer{background:var(--navy);color:#fff}
 .loc-codes span{font-size:13px;color:#cdd6e1;padding:2px 14px;border-right:1px solid rgba(255,255,255,.15)}
 .loc-codes span:first-child{padding-left:0}
 .loc-meta{display:flex;gap:24px;color:#aebac9;font-size:14px;flex-wrap:wrap}
+.loc-meta span{display:inline-flex;align-items:center;gap:6px}
 .fbottom{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap;gap:14px}
 .fbottom-brand{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .fbottom-logo{height:22px;width:auto;opacity:.9}
@@ -292,7 +293,7 @@ footer{background:var(--navy);color:#fff}
 .form-card .agree{font-size:12.5px;color:var(--slate);margin-bottom:20px}
 .form-card .agree a{color:var(--orange)}
 .form-card .submit{text-align:center}
-.success-msg{color:var(--primary);font-weight:600;padding:16px 0;font-size:15px}
+.success-msg{color:var(--primary);font-weight:600;padding:16px 0;font-size:15px;display:flex;align-items:center;gap:8px}
 /* QUOTE MODAL */
 .modal-overlay{position:fixed;inset:0;background:rgba(20,26,31,.72);z-index:200;display:flex;align-items:center;justify-content:center;padding:24px;overflow-y:auto}
 .modal-card{position:relative;max-width:460px;width:100%;margin:auto;max-height:90vh;overflow-y:auto}
@@ -412,7 +413,7 @@ a.pic{cursor:pointer}
 .tp-track{display:flex;gap:20px;width:max-content;animation:tp-scroll 60s linear infinite}
 .tp-track:hover{animation-play-state:paused}
 .tp-card{flex:0 0 260px;background:#fff;border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
-.tp-stars{color:#00b67a;letter-spacing:3px;margin-bottom:10px;font-size:15px}
+.tp-stars{display:flex;gap:2px;color:#00b67a;margin-bottom:10px}
 .tp-quote{font-size:13px;color:var(--slate);line-height:1.6;margin-bottom:14px;min-height:62px}
 .tp-who{display:flex;align-items:center;gap:9px}
 .tp-avatar{width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0}
@@ -496,7 +497,7 @@ a.pic{cursor:pointer}
 .order-note{font-size:12px;color:#8fa0b3;margin-top:16px;line-height:1.6}
 .payment-card{padding:38px 34px}
 .pay-tabs{display:flex;gap:12px;margin:26px 0 22px;flex-wrap:wrap}
-.pay-tab{flex:1;min-width:150px;padding:13px 16px;border:1.5px solid var(--line);border-radius:10px;background:#fff;font-family:'Poppins';font-weight:600;font-size:13.5px;color:var(--ink);cursor:pointer;transition:.2s}
+.pay-tab{flex:1;min-width:150px;padding:13px 16px;border:1.5px solid var(--line);border-radius:10px;background:#fff;font-family:'Poppins';font-weight:600;font-size:13.5px;color:var(--ink);cursor:pointer;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px}
 .pay-tab.active{border-color:var(--primary);background:var(--primary-tint);color:var(--primary-d)}
 .card-fld{border:1.5px solid var(--line);border-radius:10px;padding:14px}
 .pay-hint{font-size:13px;color:var(--slate);background:var(--gray-bg);padding:14px 16px;border-radius:10px;line-height:1.6}

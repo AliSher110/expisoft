@@ -13,6 +13,7 @@
     "@paypal/react-paypal-js": "^10.1.2",
     "@stripe/react-stripe-js": "^6.7.0",
     "@stripe/stripe-js": "^9.9.0",
+    "lucide-react": "^1.30.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.18.0"

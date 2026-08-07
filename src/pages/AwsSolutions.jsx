@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Cloud, DollarSign, Lock, TrendingUp } from 'lucide-react'
 
 const capabilities = [
-  { ic: '☁️', h: 'Infrastructure as Code', p: 'Terraform and CloudFormation templates so every environment is reproducible and version-controlled.' },
-  { ic: '📈', h: 'Auto-Scaling Architecture', p: 'EC2, ECS, and Lambda configurations that scale with real traffic, not fixed guesses.' },
-  { ic: '🔐', h: 'Security & Compliance', p: 'IAM least-privilege access, VPC isolation, and audit logging built in from the start.' },
-  { ic: '💰', h: 'Cost Optimization', p: 'Right-sizing, reserved instances, and spend monitoring that keeps your AWS bill predictable.' },
+  { ic: Cloud, h: 'Infrastructure as Code', p: 'Terraform and CloudFormation templates so every environment is reproducible and version-controlled.' },
+  { ic: TrendingUp, h: 'Auto-Scaling Architecture', p: 'EC2, ECS, and Lambda configurations that scale with real traffic, not fixed guesses.' },
+  { ic: Lock, h: 'Security & Compliance', p: 'IAM least-privilege access, VPC isolation, and audit logging built in from the start.' },
+  { ic: DollarSign, h: 'Cost Optimization', p: 'Right-sizing, reserved instances, and spend monitoring that keeps your AWS bill predictable.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function AwsSolutions() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Infrastructure That Scales With You</p>
               <h1>AWS Solutions & Development Services</h1>
               <p className="lead">
-                We design, migrate, and manage AWS infrastructure built for real production workloads —
+                We design, migrate, and manage AWS infrastructure built for real production workloads -
                 right-sized from day one, so you're not paying for capacity you don't need.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function AwsSolutions() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function AwsSolutions() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -115,7 +116,7 @@ export default function AwsSolutions() {
               <h3>Right-Sizing an Over-Provisioned AWS Environment</h3>
               <p>
                 We audited a client's AWS account, moved fixed infrastructure to auto-scaling groups, and
-                introduced reserved capacity for predictable workloads — cutting spend while improving reliability.
+                introduced reserved capacity for predictable workloads - cutting spend while improving reliability.
               </p>
               <ul>
                 {['38% reduction in monthly AWS spend', '99.95% uptime post-migration', 'Auto-scaling handles 5x traffic spikes without manual intervention', 'Full infrastructure-as-code, zero manual console changes'].map(b => <li key={b}>{b}</li>)}

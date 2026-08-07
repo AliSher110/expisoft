@@ -90,7 +90,7 @@ export default function BlogArticle() {
             <div className="txt">
               <p className="eyebrow" style={{ color: 'var(--orange)', marginBottom: 12 }}>Ready to Start?</p>
               <h2>Turn These Ideas Into Your Next Build</h2>
-              <p>Tell us what you're working on and we'll help you scope it — no pressure, just a straight answer.</p>
+              <p>Tell us what you're working on and we'll help you scope it - no pressure, just a straight answer.</p>
               <Link to="/" className="btn btn-orange">Discuss Your Project →</Link>
             </div>
             <div className="pic">

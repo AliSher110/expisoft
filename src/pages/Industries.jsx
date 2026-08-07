@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
+import { ArrowRight } from 'lucide-react'
 
 const spotlight = [
   { h: 'Healthcare', p: 'HIPAA-compliant apps, patient portals, telemedicine & health data analytics.', img: '1576091160399-112ba8d25d1d' },
@@ -41,7 +42,7 @@ export default function Industries() {
               <p className="lead">
                 Great software understands the industry it serves. Our teams pair deep domain
                 knowledge with engineering rigor to ship products that meet real regulatory,
-                operational, and user demands — not just generic templates.
+                operational, and user demands - not just generic templates.
               </p>
               <div className="pillars">
                 {['12+ Industries Served', '800+ Projects Shipped', 'HIPAA / PCI / SOC2 Ready', '10+ Years Domain Depth'].map(p => (
@@ -96,7 +97,7 @@ export default function Industries() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -149,7 +150,7 @@ export default function Industries() {
             <div className="txt">
               <p className="eyebrow" style={{ color: 'var(--orange)', marginBottom: 12 }}>Don't See Your Industry?</p>
               <h2>We Adapt Fast to New Domains</h2>
-              <p>Our discovery process gets our engineers fluent in your industry's compliance, workflows, and users within weeks — not months.</p>
+              <p>Our discovery process gets our engineers fluent in your industry's compliance, workflows, and users within weeks - not months.</p>
               <Link to="/" className="btn" style={{ background: 'var(--orange)' }}>Talk to an Industry Expert</Link>
             </div>
             <div className="pic">

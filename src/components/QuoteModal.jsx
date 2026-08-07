@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { CheckCircle2, X } from 'lucide-react'
 
 const services = [
   'Mobile App Development', 'Custom Software Development', 'Web Development',
@@ -27,11 +28,11 @@ export default function QuoteModal({ onClose }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-card form-card" onClick={e => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose} aria-label="Close">✕</button>
+        <button className="modal-close" onClick={onClose} aria-label="Close"><X size={16} strokeWidth={2} /></button>
         <h3>Get a Free Quote</h3>
-        <p className="sub">Tell us about your project and the service you need — we'll reply within 24 hours.</p>
+        <p className="sub">Tell us about your project and the service you need - we'll reply within 24 hours.</p>
         {sent ? (
-          <p className="success-msg">✓ Thanks! We'll be in touch shortly with your quote.</p>
+          <p className="success-msg"><CheckCircle2 size={18} strokeWidth={1.75} /> Thanks! We'll be in touch shortly with your quote.</p>
         ) : (
           <form onSubmit={onSubmit}>
             <div className="fld">

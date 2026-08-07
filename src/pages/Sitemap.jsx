@@ -30,10 +30,9 @@ const columns = [
     h: 'Marketplace',
     links: [
       { label: 'PremierGarde eCommerce Store', href: 'https://premiergarde.com/', external: true },
-      { label: 'Home Theaters', href: 'https://hometheaters.store/', external: true },
-      { label: 'eMobility Scooters', href: 'https://emobilityscooter.shop/', external: true },
       { label: 'Arizona Globals', href: 'https://arizonaglobals.com/', external: true },
       { label: 'The Work Frame', href: 'https://theworkframe.com/', external: true },
+      { label: 'VerdaraFarm', href: 'https://verdarafarm.com', external: true },
     ],
   },
   {

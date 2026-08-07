@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, Atom, Lock, Search, Zap } from 'lucide-react'
 
 const capabilities = [
-  { ic: '⚛️', h: 'Component Architecture', p: 'Reusable, tested component libraries built for design-system consistency across your product.' },
-  { ic: '⚡', h: 'Next.js App Router', p: 'Server components, streaming, and edge rendering for sub-second page loads.' },
-  { ic: '🔍', h: 'SEO & Core Web Vitals', p: 'Static generation, image optimization, and metadata handled correctly from day one.' },
-  { ic: '🔐', h: 'Auth & Data Layer', p: 'Secure session handling and typed data fetching wired into your API or headless CMS.' },
+  { ic: Atom, h: 'Component Architecture', p: 'Reusable, tested component libraries built for design-system consistency across your product.' },
+  { ic: Zap, h: 'Next.js App Router', p: 'Server components, streaming, and edge rendering for sub-second page loads.' },
+  { ic: Search, h: 'SEO & Core Web Vitals', p: 'Static generation, image optimization, and metadata handled correctly from day one.' },
+  { ic: Lock, h: 'Auth & Data Layer', p: 'Secure session handling and typed data fetching wired into your API or headless CMS.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function ReactNextjsDevelopment() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Modern Frontend Engineering</p>
               <h1>React & Next.js Development Services</h1>
               <p className="lead">
-                We build fast, SEO-friendly, production-grade web apps with React and Next.js — from
+                We build fast, SEO-friendly, production-grade web apps with React and Next.js - from
                 marketing sites that need perfect Core Web Vitals to complex authenticated dashboards.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function ReactNextjsDevelopment() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function ReactNextjsDevelopment() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>

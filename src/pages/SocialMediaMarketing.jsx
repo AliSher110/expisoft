@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import ConsultForm from '../components/ConsultForm'
 import PricingSection from '../components/PricingSection'
+import { ArrowRight, BarChart3, FileEdit, MessageSquare, Palette } from 'lucide-react'
 
 const capabilities = [
-  { ic: '📝', h: 'Content Creation & Scheduling', p: 'A planned, consistent content calendar across every platform that matters to your audience.' },
-  { ic: '💬', h: 'Community Management', p: 'Real responses to comments and DMs, not an autoresponder pretending to be a person.' },
-  { ic: '📊', h: 'Performance Analytics', p: 'Reporting tied to followers that convert, not just followers that scroll past.' },
-  { ic: '🎨', h: 'Brand-Consistent Creative', p: 'Visual and voice guidelines applied consistently across every post and platform.' },
+  { ic: FileEdit, h: 'Content Creation & Scheduling', p: 'A planned, consistent content calendar across every platform that matters to your audience.' },
+  { ic: MessageSquare, h: 'Community Management', p: 'Real responses to comments and DMs, not an autoresponder pretending to be a person.' },
+  { ic: BarChart3, h: 'Performance Analytics', p: 'Reporting tied to followers that convert, not just followers that scroll past.' },
+  { ic: Palette, h: 'Brand-Consistent Creative', p: 'Visual and voice guidelines applied consistently across every post and platform.' },
 ]
 
 const stack = [
@@ -41,7 +42,7 @@ export default function SocialMediaMarketing() {
               <p className="eyebrow orange" style={{ marginBottom: 14 }}>Organic Growth, Not Vanity Metrics</p>
               <h1>Social Media Marketing Services</h1>
               <p className="lead">
-                We plan, create, and schedule social content built to grow a real audience — tied to
+                We plan, create, and schedule social content built to grow a real audience - tied to
                 business goals, not just posting for the sake of a content calendar.
               </p>
               <div className="pillars">
@@ -76,7 +77,7 @@ export default function SocialMediaMarketing() {
           <div className="icards">
             {capabilities.map(c => (
               <div key={c.h} className="icard">
-                <div className="ic">{c.ic}</div>
+                <div className="ic"><c.ic size={24} strokeWidth={1.75} /></div>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
               </div>
@@ -95,7 +96,7 @@ export default function SocialMediaMarketing() {
                 <div key={s.h} className={`tcard-tech${s.hot ? ' scard hot' : ''}`}>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
-                  <span className="arr">→</span>
+                  <span className="arr"><ArrowRight size={16} strokeWidth={2} /></span>
                 </div>
               ))}
             </div>
@@ -115,7 +116,7 @@ export default function SocialMediaMarketing() {
               <h3>A Content Calendar Built Six Weeks Ahead, Every Week</h3>
               <p>
                 We rebuilt a client's content strategy around a consistent, six-week-ahead planning
-                cadence and platform-native creative — turning social into their #2 acquisition channel.
+                cadence and platform-native creative - turning social into their #2 acquisition channel.
               </p>
               <ul>
                 {['2k to 45k followers in 6 months', 'Engagement rate 3x above industry benchmark', 'Content calendar fully planned 6 weeks ahead at all times', 'Social-driven traffic became the #2 acquisition channel'].map(b => <li key={b}>{b}</li>)}
